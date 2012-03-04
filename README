@@ -1,0 +1,39 @@
+Features
+
+ Extremely easy to use.
+ No complex set ups or extra coding unless you want to.
+ Theme options page(where you can set a logo, link colors, fav ico, twitter user, etc)
+ WordPress 3+ ready (menus, featured image, widget ready, etc)
+ Built using 960 Gris System and adapt.js
+ Responsive design, works on ANY screen :)
+ HTML5
+ CSS3 (a bit since its supposed to be minimal)
+ Firefox, Chrome, Safari, Opera and IE7+ supported
+ Well commented (if not feel free to post me)
+ and more..
+
+Additionally , you can use it as a(very tiny) framework for your  projects; and you can get some support here on this page by using the comments form below.
+
+Installation
+
+ Unzip theme
+ Copy the contents on your themes/ directory
+ Go to your site Dashboard and look for Appearance>themes>
+ Select maju theme form the options and activate it.
+ Finally but optional, go to appearance >Theme Options
+ Fill the options given.
+
+Set up Guide
+
+To configure the following options:
+
+ Logo URL
+ Number of posts on frontpage
+ twitter user name
+ color links
+ footer copy
+ fav ico URL
+ Apple touch icon URL
+
+Go to Appearance => Theme Options. For developers, you can add more config. option on maju/backend/theme-options.php and add styles on maju/backend/css/theme-options.css
+Twitter user name will be used on the tweet button at the end of every post. G+, facebook, Pinterest and others might be added on future releases.
