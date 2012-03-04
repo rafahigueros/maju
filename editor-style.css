@@ -1,0 +1,89 @@
+/*
+Theme Name: Maju
+Description: Used to style the TinyMCE editor.
+*/
+
+html .mceContentBody {
+	max-width: 584px;
+}
+* {
+	color: inherit;
+	font-style: inherit;
+	font-weight: inherit;
+	line-height: 1.625;
+}
+
+pre {
+    overflow-x: auto;
+    font-family: "Menlo", Courier, monospace;
+    padding: 5%;
+    display: block;
+    margin-bottom: 25px;
+    font-size: 15px;
+    color: whiteSmoke;
+    background: #444;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    width: 90%;
+    margin: inherit;
+}
+
+code {
+    background: #eee;
+    font-family: "Menlo", Courier, monospace; 
+    font-size: 14px;
+}
+
+blockquote {
+    background:#f9f9f9;
+    border-left:10px solid #ccc;
+    margin:1.5em 10px;
+    padding:.5em 10px;
+    quotes:"\201C""\201D""\2018""\2019";
+}
+
+blockquote:before {
+    color:#ccc;
+    content:open-quote;
+    font-size:4em;
+    line-height:.1em;
+    margin-right:.25em;
+    vertical-align:-.4em;
+}
+
+blockquote p {
+    display:inline;
+}
+
+/* HEADINGS _____________________________________*/
+h1, h2, h3, h4, h5, h6 { font-family: 'Asap', sans-serif; }
+h1 { font-size: 36px; }
+h2 { font-size: 28px; }
+h3 { font-size: 24px; }
+h4 { font-size: 20px; }
+h5 { font-size: 16px; }
+h6 { font-size: 14px; }
+
+/* LINKS _____________________________________*/
+a	    { text-decoration: none;  }
+a:link 	    { color: #4a768f; }
+a:visited   { color: #4a768f; }
+a:hover     { color: #0095da; }
+a:active    { color: #000; }
+
+.wp-caption-text {
+    background: #eee;
+    margin-top: -5px;
+    padding: 0 5px;
+}
+
+img {
+    height: auto;
+    width: auto; 
+}
+    article img.alignright { float: right; margin: 10px 0 10px 20px ; }
+    article img.alignleft { float: left; margin: 10px 20px 10px 0; }
