@@ -31,7 +31,11 @@ get_header();  ?>
 		<?php endwhile; else: ?>
 		<article class="notfound">
 		    <h1><?php _e('404', 'maju'); ?></h1>
-		    <p>Page not found</p>
+		    <img class="alignleft"  alt="dafuck?" src="<?php bloginfo('template_url'); ?>/images/404.jpg"/>	
+		    <h5>dafuck is a 404?</h5>
+		    <p>when a "404" or "not found" page appears means that you have reached a page that no loger exists or was moved to a diferent URL don't worry, is not you fault.</p>
+		    <p>Feel free to <a href="<?echo get_option('home'); ?>/contact">contact me</a> or use one of the options below &darr;</p>
+		    <br />
 		    <h5><?php _e('Try using the search form', 'maju') ?></h5>
 		    <?php get_search_form();  ?>
 		</article>
@@ -47,7 +51,7 @@ get_header();  ?>
 		    <?php while ($recentPosts->have_posts()) : $recentPosts->the_post(); ?>
 			<li><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><em><?php the_date(); ?> - </em><?php the_title(); ?></a></li>
 		    <?php endwhile; wp_reset_query(); ?> 
-			<li><a href="<?php echo get_option('home') ?>/archives"><?php _e('View all posts &rarr;', 'maju' ?></a></li>
+			<li><a href="<?php echo get_option('home') ?>/archives"><?php _e('View all posts &rarr;', 'maju') ?></a></li>
 		    </ul>
 		</div>
 
