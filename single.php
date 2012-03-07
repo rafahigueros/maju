@@ -27,7 +27,7 @@ get_header();  ?>
 
 		<p>
 		    <?php if($options['tw_user'] == '') { } else { ?>
-		    <a  href="https://twitter.com/share" class="twitter-share-button" data-via="<?php echo $options['tw_user']; ?>" data-size="large" data-text=”<?php the_title(); ?>” data-url="<?php echo urlencode(get_permalink($post->ID)); ?>" data-lang="en">Tweet</a>
+		    <a  href="https://twitter.com/share" class="twitter-share-button" data-size="large"  data-text="<?php the_title(); ?>" data-url="<?php the_permalink(); ?>" data-via="<?php echo $options['tw_user']; ?>" data-lang="en">Tweet</a>
 		    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 		    <?php } ?>
 		    <a style="float: right;" href="#" id="back-top"><?php _e('top &uarr;', 'maju') ?></a>

@@ -1,7 +1,7 @@
 <?php 
 
 /*
-    Fullwidth page template 
+    Template Name: No Sidebar
     theme: maju by rafaelhigueros.me | scream.ws
     v: 1.0
 */

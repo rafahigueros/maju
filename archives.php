@@ -1,7 +1,7 @@
 <?php 
 
 /*
-    Archives template 
+    Template Name: Archive
     theme: maju by rafaelhigueros.me | scream.ws
     v: 1.0
 */
@@ -16,18 +16,17 @@ get_header();  ?>
 	    <section id="articles" class="grid_9">
 		
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-		<article id="archives"> 
-		    <div class="grid_4">
+		<article> 
 		    <h5 class="title"><?php the_title(); ?></h5>
+		    <div class="archives">
 		    <ul>
-			<?php wp_get_archives('type=alpha'); ?>
-		    </ul>
-		    </div>
-
-		    <div class="grid_4">
-		    <h5><?php _e('Archives by Category:', 'maju') ?></h5>
-		    <ul>
-			 <?php wp_list_categories(); ?>
+		    <?php
+			$recentPosts = new WP_Query();
+			$recentPosts->query('showposts=10');
+		    ?>
+		    <?php while ($recentPosts->have_posts()) : $recentPosts->the_post(); ?>
+			<li><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><em><?php the_date('M d Y'); ?></em><?php the_title(); ?></a></li>
+		    <?php endwhile; wp_reset_query(); ?> 
 		    </ul>
 		    </div>
 		</article>

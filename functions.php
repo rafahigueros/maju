@@ -50,6 +50,7 @@
         return $excerpt;
     }
 
+
     //Ad backend options to Dashboard
     require_once ( get_template_directory() . '/backend/theme-options.php' );
 

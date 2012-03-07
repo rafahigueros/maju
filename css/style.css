@@ -126,7 +126,7 @@ ___________________________________________________________*/
 
 /* Header
 ___________________________________________________________*/
-header #searchform {
+.js header #searchform {
     display: none;
     position: absolute;
     right: 0px;
@@ -166,10 +166,21 @@ article { padding: 0 0 30px 0;  }
     article.notfound img { margin: 0 30px 30px 0; }
     article.notfound h1 { font-size: 40px;  }
 
-.archives { margin: 30px 0 0 0; }
-    .archives ul { list-style-type: none; }
-    .archives ul li em { font-size: 12px;  }
-    .archives ul li:last-child a { font-size: 12px;  }
+.archives.home { margin: 30px 0 0 0; }
+    .archives ul { 
+	list-style-type: none; 
+	padding: 0;
+    }
+    .archives ul li { 
+	border-bottom: 1px dotted #ccc;
+	padding: 8px 0;
+    }
+    .archives ul li em { 
+	font-size: 12px; 
+	padding: 0 30px 0 0;
+	text-transform: uppercase;  
+    }
+    .archives.home ul li:last-child a { font-size: 12px;  }
 
 .singlepost-ad { 
     border-top: 1px dashed #ccc;
@@ -197,8 +208,12 @@ ___________________________________________________________*/
 	margin: 0 0 30px 0;
 	width: 130px;
     }
-	#sidebar .sidebar-box h5 { margin: 6px 0;  }
-	#sidebar #rotating-adds p { color: #999; font-size: 14px; }
+	#sidebar .sidebar-box ul {
+	    list-style-type: none;
+	    padding: 0 0 0 10px;
+	}
+	#sidebar .sidebar-box h5 { margin: 0;  }
+	#sidebar #rotating-adds p { color: #999; font-size: 14px; margin-top: 5px; }
 	#sidebar #social ul { list-style-type: none; padding: 0 0 0 20px; }
 
 

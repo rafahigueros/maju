@@ -33,5 +33,9 @@
 
 article img.size-full { width: 100%;  }
 
+.archives ul li em { display: block !important; }
+
 #sidebar { margin-top: 40px;  }
 .sidebar-box { float: left !important; margin: 0 40px 0 0 !important;  }
+
+#commentform p label { text-align: left !important;  }

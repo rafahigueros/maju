@@ -36,6 +36,7 @@ $options = get_option('maju_theme_options');
 
 	?></title>
 	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
 
 	<!-- Fav icon -->
 	<?php if($options['favico_url'] == '') {  } else { ?>
@@ -49,7 +50,7 @@ $options = get_option('maju_theme_options');
 	<link rel="stylesheet" href="<?php bloginfo('template_url');?>/css/style.css" media="screen" />
 	<link rel="stylesheet" href="<?php bloginfo('template_url');?>/css/tables.css" media="screen" />
 	<noscript>
-	    <link rel="stylesheet" href="<?php bloginfo('template_url');?>/css/mobile.css" />
+	    <link rel="stylesheet" href="<?php bloginfo('template_url');?>/css/720.css" />
 	</noscript>
 	<link href='http://fonts.googleapis.com/css?family=Asap' rel='stylesheet' type='text/css'><!-- Google Font Used on titles -->
 	
@@ -65,34 +66,10 @@ $options = get_option('maju_theme_options');
 	<!-- SEO (Custom SEO can be placed here)-->
 	<meta name="description" content="<?php bloginfo('description'); ?>" />	
 	<link rel='canonical' href='<?php echo get_option('home'); ?>' />
-    
-	<!-- Script Librarys -->
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-
-	<script>
-	//This enables the site to adjust on any screen, you can find this script here: http://adapt.960.gs/
-	// Edit to suit your needs.
-	var ADAPT_CONFIG = {
-	  // Where is your CSS?
-	  path: '<?php bloginfo('template_url'); ?>/css/',
-
-	  // false = Only run once, when page first loads.
-	  // true = Change on window resize and page tilt.
-	  dynamic: true,
-
-	  // First range entry is the minimum.
-	  // Last range entry is the maximum.
-	  // Separate ranges by "to" keyword.
-	  range: [
-	    '0px    to 760px  = mobile.css',
-	    '760px  to 1280px  = 720.css'
-	  ]
-	};
-	</script>
-	<script src="<?php bloginfo('template_url'); ?>/js/adapt.min.js"></script>
-
 	
-	<!--[if IE ]><![endif]-->
+	<!--[if lt IE]>
+	    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
 
 	<?php 
 	// Comments multy reply    
