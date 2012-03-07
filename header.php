@@ -90,7 +90,7 @@ $options = get_option('maju_theme_options');
 	    // If set on the theme options page, add the logo image, if not, just add the name ad desc. as text
 	    if($options['logo_url'] == '') { ?>
 	    <h1 id="site-title"><!-- Site name/title -->
-		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php bloginfo('name'); ?>">rafaelhigueros</a>
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('title'); ?></a>
 		<span><?php bloginfo( 'description' ); ?></span>
 	    </h1>
 	    <?php } else { ?>

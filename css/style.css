@@ -1,38 +1,5 @@
 /*================================
 SCREAM WEB STUDIOS CSS FRAMEWORK
-
-Some basic usage instructions:
-
-	- Indent must be 4 spaces.
-
-	- Set your attributes alphabetically like this:
-	
-		.someclass {
-			background: red;
-			border: 1px solid #000;
-			color: #fff;
-			font-family: sans-serif;
-			width: 200px;
-		}
-		
-	- You can nest your classes and/or IDs (4 spaces indent):
-	
-		#header { background: #ff0000; }	
-		--> #header #logo { float: left; }
-		
-	- Use Comments to separate web site sections, like this:
-	
-		==============================
-			HEADER
-		==============================
-		
-	- Do not use IE hacks, instead use HTML conditional Tags (<!--[if IE 7 ]><![endif]-->).
-	- We Do not support IE6 by choice, so don't worry about PNG fixes.
-	- TEST YOUR CSS ON ALL MAYOR BROWSERRS (IE7-8-9, Firefox, Chrome, Safari and Opera).
-	- Your CSS MUST be valid, test it with W3C validator.  
-	- Use CSS Sprites every time you can.
-	- Keep it lite, re-use your CSS, the less lines you have the faster it'll load.
-
 ================================*/
 html, body, div, span, a, 
 img, h1, h2, h3, h4, h5, h6, p,
@@ -130,7 +97,7 @@ ___________________________________________________________*/
     display: none;
     position: absolute;
     right: 0px;
-    top: 60px;
+    top: 95px;
 }
 
     #site-title { overflow: hidden;  }
@@ -150,6 +117,7 @@ article { padding: 0 0 30px 0;  }
     article h1 a { font-family: 'Asap', sans-serif; }
     article img {
 	height: auto;
+	max-width: 520px;
 	width: auto; 
     }
     article img.alignright, .wp-caption.alignright { float: right; margin: 10px 0 10px 20px ; }
@@ -158,9 +126,11 @@ article { padding: 0 0 30px 0;  }
 
     article .wp-caption {
 	background: #eee;
+	max-width: 520px !important;
 	padding-top: 5px;
 	text-align: center;
     }
+    article .wp-caption img { max-width: 500px !important;  }
     article .wp-caption-text { margin: -5px 0 0 0; }
 
     article.notfound img { margin: 0 30px 30px 0; }
@@ -212,7 +182,7 @@ ___________________________________________________________*/
 	    list-style-type: none;
 	    padding: 0 0 0 10px;
 	}
-	#sidebar .sidebar-box h5 { margin: 0;  }
+	#sidebar .sidebar-box h5 { line-height: normal !important; margin: 0; }
 	#sidebar #rotating-adds p { color: #999; font-size: 14px; margin-top: 5px; }
 	#sidebar #social ul { list-style-type: none; padding: 0 0 0 20px; }
 

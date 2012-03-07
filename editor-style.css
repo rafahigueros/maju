@@ -90,10 +90,20 @@ big {
 
 img {
     height: auto;
+    max-width: 520px;
     width: auto; 
 }
     img.alignright { float: right; margin: 10px 0 10px 20px ; }
     img.alignleft { float: left; margin: 10px 20px 10px 0; }
+
+.wp-caption {
+    background: #eee;
+    max-width: 520px !important;
+    padding-top: 5px;
+    text-align: center;
+}
+.wp-caption img { max-width: 500px !important;  }
+.wp-caption-text { margin: -5px 0 0 0; }
     
 /* Tables */
 table {
