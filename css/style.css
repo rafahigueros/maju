@@ -204,6 +204,7 @@ ___________________________________________________________*/
     border-top: 1px dashed #ccc;
     display: inline-block;
     margin: 30px 0 0 0;
+    width: 520px;
 }
 
 #respond label {
