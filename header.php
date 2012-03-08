@@ -67,7 +67,7 @@ $options = get_option('maju_theme_options');
 	<meta name="description" content="<?php bloginfo('description'); ?>" />	
 	<link rel='canonical' href='<?php echo get_option('home'); ?>' />
 	
-	<!--[if lt IE]>
+	<!--[if IE]>
 	    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 
