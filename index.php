@@ -14,18 +14,14 @@ get_header();  ?>
 	<div id="body">
 
 	    <section id="articles" class="grid_9">
-
-		<?php
-		    $u = $options['post_num'];
-		    $recentPosts = new WP_Query();
-		    $recentPosts->query('showposts='.$u.'');
-		?>
-		<?php while ($recentPosts->have_posts()) : $recentPosts->the_post(); ?>
+		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		<article> 
 		    <h1 class="title"><a href="<? the_permalink();?>" title="<?php the_title();  ?>"><?php the_title(); ?></a></h1>
 		    <?php the_content(); ?>
 		</article>
-		<?php endwhile; wp_reset_query(); ?> 
+		<?php endwhile; else: ?>
+		<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
+		<?php endif; ?>
 
 		<div class="archives home">
 		    <h4><?php _e('Archives', 'maju') ?></h4>

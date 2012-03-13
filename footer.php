@@ -16,9 +16,10 @@ get_header();  ?>
 	    <?php 
 	    // If set on theme options page, footer copy will be pasted here
 	    if($options['footer_copy'] == '') { ?>
-	    <small class="copy">&copy; 2012 WP theme depeloped by <a href="http://rafaelhigueros.com">rafaelhigueros.com</small>
+	    <small class="copy">&copy; 2012 WP theme by <a href="http://rafaelhigueros.com">rafaelhigueros.com</a></small>
 	    <?php } else { ?>
-	    <small class="copy"><?php echo $options['footer_copy']; ?></small>
+	    <small class="copy">
+		<?php echo $options['footer_copy']; ?></small>
 	    <?php } ?>
 	    <small class="links"><a href="#" id="back-top"><?php _e('top &uarr;', 'maju') ?></a></small>
 	</footer><!--- #END Footer -->

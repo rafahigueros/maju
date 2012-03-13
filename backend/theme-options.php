@@ -26,8 +26,6 @@ function theme_options_add_page() {
 function customAdmin() {
     $url = get_settings('siteurl');
     $maincss = $url . '/wp-content/themes/maju/backend/css/theme-options.css';
-    $colorpickercss = $url . '/wp-content/themes/maju/backend/css/jquery.miniColors.css';
-    $colorpickerjs = $url . '/wp-content/themes/maju/backend/js/jquery.miniColors.min.js';
     echo '<!-- custom admin css -->
           <link rel="stylesheet" type="text/css" href="' . $maincss . '" />
           <!-- /end custom adming css -->';
@@ -58,41 +56,19 @@ function theme_options_do_page() {
 		<?php settings_fields( 'maju_options' ); ?>
 		<?php $options = get_option( 'maju_theme_options' ); ?>
 
-		<table class="form-table">
+		<table class="form-table theme-options-wrap">
+		    <tr class="even">
+		        <td colspan="2">
+		            <h3>General View Options</h3>
+		        </td>
+		    </tr>
 		    <tr valign="top">
 			<td scope="row" class="option_name"><?php _e( 'Logo URL', 'maju' ); ?></td>
 			<td>
 			    <input id="maju_theme_options[logo_url]" class="regular-text" type="text" name="maju_theme_options[logo_url]" value="<?php esc_attr_e( $options['logo_url'] ); ?>" />
 			</td>
 		    </tr>
-		    <tr valign="top" class="even">
-			<td scope="row" class="option_name"><?php _e( 'Number of posts on Frontpage', 'maju' ); ?></td>
-			<td>
-			    <input id="maju_theme_options[post_num]" class="regular-text" type="text" name="maju_theme_options[post_num]" value="<?php esc_attr_e( $options['post_num'] ); ?>" />
-			</td>
-		    </tr>
 		    <tr valign="top">
-			<td scope="row" class="option_name"><?php _e( 'Twitter user name (no "@", will be used for Tweet button)', 'maju' ); ?></td>
-			<td>
-			    <input id="maju_theme_options[tw_user]" class="regular-text" type="text" name="maju_theme_options[tw_user]" value="<?php esc_attr_e( $options['tw_user'] ); ?>" />
-			</td>
-		    </tr>
-		    <tr valign="top" class="even">
-			<td scope="row" class="option_name"><?php _e( 'Links color (leave blank to set default color, enter hex values or color name)', 'maju' ); ?></td>
-			<td class="color">
-			    <p>link</p>
-			    <input id="maju_theme_options_links_color" class="regular-text" type="text" name="maju_theme_options[links_color]" value="<?php esc_attr_e( $options['links_color'] ); ?>" />
-			    <p>hover</p>
-			    <input id="maju_theme_options_links_color_hover" class="regular-text" type="text" name="maju_theme_options[links_hover]" value="<?php esc_attr_e( $options['links_hover'] ); ?>" />
-			</td>
-		    </tr>
-		    <tr valign="top">
-			<td scope="row" class="option_name"><?php _e( 'Footer &copy;', 'maju' ); ?></td>
-			<td>
-			    <input id="maju_theme_options[footer_copy]" class="regular-text" type="text" name="maju_theme_options[footer_copy]" value="<?php esc_attr_e( $options['footer_copy'] ); ?>" />
-			</td>
-		    </tr>
-		    <tr valign="top" class="even">
 			<td scope="row" class="option_name"><?php _e( 'Favico URL', 'maju' ); ?></td>
 			<td>
 			    <input id="maju_theme_options[favico_url]" class="regular-text" type="text" name="maju_theme_options[favico_url]" value="<?php esc_attr_e( $options['favico_url'] ); ?>" />
@@ -104,7 +80,52 @@ function theme_options_do_page() {
 			    <input id="maju_theme_options[appleicon_url]" class="regular-text" type="text" name="maju_theme_options[appleicon_url]" value="<?php esc_attr_e( $options['appleicon_url'] ); ?>" />
 			</td>
 		    </tr>
-		    <tr valign="top" class="even">
+		    <tr valign="top">
+			<td scope="row" class="option_name"><?php _e( 'Links color', 'maju' ); ?></td>
+			<td class="color">
+			    <span class="description">Links:</span>
+			    <input id="maju_theme_options_links_color" class="small-text" type="text" name="maju_theme_options[links_color]" value="<?php esc_attr_e( $options['links_color'] ); ?>" />
+			    <span class="description">  Hover:</span>
+			    <input id="maju_theme_options_links_color_hover" class="small-text" type="text" name="maju_theme_options[links_hover]" value="<?php esc_attr_e( $options['links_hover'] ); ?>" />
+			    <span class="description"><?php _e('*leave fields blank to set default color, enter hex values or color name', 'maju'); ?></span>
+			</td>
+		    </tr>
+		    <tr valign="top">
+			<td scope="row" class="option_name"><?php _e( 'Number of posts on Frontpage', 'maju' ); ?></td>
+			<td>
+			    <input id="maju_theme_options[post_num]" class="regular-text" type="text" name="maju_theme_options[post_num]" value="<?php esc_attr_e( $options['post_num'] ); ?>" />
+			</td>
+		    </tr>
+		    <tr class="even">
+		        <td colspan="2">
+			<h3><?php _e('Social', 'maju'); ?></h3>
+		        </td>
+		    </tr>
+		    <tr valign="top">
+			<td scope="row" class="option_name"><?php _e( 'Twitter user name', 'maju' ); ?></td>
+			<td>
+			    <input id="maju_theme_options[tw_user]" class="regular-text" type="text" name="maju_theme_options[tw_user]" value="<?php esc_attr_e( $options['tw_user'] ); ?>" />
+			    <span class="description">Will be used for Tweet button</span>
+			</td>
+		    </tr>
+		    <tr class="even">
+		        <td colspan="2">
+			<h3><?php _e('Other', 'maju'); ?></h3>
+		        </td>
+		    </tr>
+		    <tr valign="top">
+			<td scope="row" class="option_name"><?php _e( 'Footer &copy;', 'maju' ); ?></td>
+			<td>
+			    <input id="maju_theme_options[footer_copy]" class="regular-text" type="text" name="maju_theme_options[footer_copy]" value="<?php esc_attr_e( $options['footer_copy'] ); ?>" />
+			</td>
+		    </tr>
+		    <tr valign="top">
+			<td scope="row" class="option_name"><?php _e( 'Archives Page', 'maju' ); ?></td>
+			<td>
+			    <input id="maju_theme_options[archives_page]" class="regular-text" type="text" name="maju_theme_options[archives_page]" value="<?php esc_attr_e( $options['archives_page'] ); ?>" />
+			</td>
+		    </tr>
+		    <tr valign="top">
 			<td colspan="2">
 			    <p class="submit">
 				<input type="submit" class="button-primary" value="<?php _e( 'Save Options', 'maju' ); ?>" />
@@ -143,6 +164,9 @@ function theme_options_validate( $input ) {
 
 	// Footer Copy
 	$input['footer_copy'] = wp_filter_nohtml_kses( $input['footer_copy'] );
+
+	// Archives Page
+	$input['archives_page'] = wp_filter_nohtml_kses( $input['archives_page'] );
 
 	// Favico URL
 	$input['favicor_url'] = wp_filter_nohtml_kses( $input['favico_url'] );

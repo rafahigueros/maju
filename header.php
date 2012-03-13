@@ -94,7 +94,7 @@ $options = get_option('maju_theme_options');
 		<span><?php bloginfo( 'description' ); ?></span>
 	    </h1>
 	    <?php } else { ?>
-	    <img alt="<?php bloginfo('name'); ?>" title="<?php bloginfo('name'); ?>" src="<?php echo $options['logo_url']; ?>" /><!-- If set, logo will be here -->
+	    <a id="logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php bloginfo('name'); ?>"><img alt="<?php bloginfo('name'); ?>" title="<?php bloginfo('name'); ?>" src="<?php echo $options['logo_url']; ?>" /></a><!-- If set, logo will be here -->
 	    <?php } ?>
 	    <nav>
 		<?php wp_nav_menu( array('menu' => 'main menu', 'menu_class' => 'menu' )); ?>	

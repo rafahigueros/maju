@@ -1,18 +1,10 @@
-table.form-table {
-    width: 40%;
-}
-table.form-table tr td { vertical-align: middle;  }
-table.form-table tr.even  {
-    background: #f9f9f9;
-}
-table.form-table .regular-text {
-    float: left;
-    padding: 5px;
-    width: 280px;
-}
-table.form-table a.miniColors-trigger {
-    float: left;
+table.theme-options-wrap {
+    border: 1px solid #eee;
+    width: 440px;
 }
 
-table.form-table .color input { width: 100px !important; }
-table.form-table .color p { float: left; margin-bottom: 0; width: 100% !important; }
+table.form-table tr.even  {
+    background: #f9f9f9;
+    border-top: 1px solid #eee;;
+    border-bottom: 1px solid #eee;;
+}

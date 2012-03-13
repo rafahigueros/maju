@@ -108,6 +108,8 @@ ___________________________________________________________*/
     }
 	#site-title a { font-family: 'Asap', sans-serif; }
 
+    #logo img { width: 60%;  }
+
     header ul li { color: #4a768f; list-style-type: none; }
 
 
@@ -122,13 +124,18 @@ article { padding: 0 0 30px 0;  }
     }
     article img.alignright, .wp-caption.alignright { float: right; margin: 10px 0 10px 20px ; }
     article img.alignleft, .wp-caption.alignleft { float: left; margin: 10px 20px 10px 0; }
-    article img.wp-post-image { float: left; margin: 10px 30px 10px 0; }
+    article img.wp-post-image { 
+	float: left; 
+	margin: 10px 30px 10px 0; 
+	width: 100%;
+    }
 
     article .wp-caption {
 	background: #eee;
 	max-width: 520px !important;
 	padding-top: 5px;
 	text-align: center;
+	width: 100% !important;
     }
     article .wp-caption img { max-width: 500px !important;  }
     article .wp-caption-text { margin: -5px 0 0 0; }
@@ -204,7 +211,7 @@ ___________________________________________________________*/
     border-top: 1px dashed #ccc;
     display: inline-block;
     margin: 30px 0 0 0;
-    width: 520px;
+    width: 100%;
 }
 
 #respond label {
