@@ -9,11 +9,23 @@
     add_theme_support('post-thumbnails');
 
 
-    //Defaul Sidebar
+    //Navigation Menu
+    if ( function_exists('register_sidebar') )
+    register_sidebar(array(
+	    'name' => 'Default Navigation',
+	    'description' => 'Place your costum menu here.',
+	    'before_widget' => '',
+	    'after_widget' => '',
+	    'before_title' => '',
+	    'after_title' => '',
+    ));
+
+
+    //Default Sidebar
     if ( function_exists('register_sidebar') )
     register_sidebar(array(
 	    'name' => 'Default Sidebar',
-	    'description' => 'Palce sidebar widgets here.',
+	    'description' => 'Place sidebar widgets here.',
 	    'before_widget' => '<div id="%1$s" class="sidebar-box">',
 	    'after_widget' => '</div>',
 	    'before_title' => '<h5>',
@@ -64,5 +76,28 @@
 
     //Ad backend options to Dashboard
     require_once ( get_template_directory() . '/backend/theme-options.php' );
+
+    //Include SmartMetaBox class - thanks to Nikolay Yordanov<http://nyordanov.com/> 
+    //get SmatMetaBox here: https://github.com/nyordanov/SmartMetaBox
+    //tutorial here: http://www.wproots.com/ultimate-guide-to-meta-boxes-in-wordpress/
+    require_once ( get_template_directory() . '/backend/SmartMetaBox.php' );
+
+    //Usage: 
+    /*
+    add_smart_meta_box('my-meta-box', array(
+	'title' => 'Project Info', // the title of the meta box
+	'pages' => array('page'),  // post types on which you want the metabox to appear
+	'context' => 'normal', // meta box context (see above)
+	'priority' => 'high', // meta box priority (see above)
+	'fields' => array( // array describing our fields
+	    array(
+		'name' => 'Project URL',
+		'id' => 'project_url',
+		'type' => 'text',
+	    ),
+	// put more arrays to add different fields
+	)
+    ));
+    */
 
 ?>

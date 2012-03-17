@@ -41,4 +41,30 @@ To configure the following options:
 - Apple touch icon URL
 
 Go to Appearance => Theme Options. For developers, you can add more config. option on maju/backend/theme-options.php and add styles on maju/backend/css/theme-options.css
+
 Twitter user name will be used on the tweet button at the end of every post. G+, facebook, Pinterest and others might be added on future releases.
+
+Change log
+
+    v1.1  Mar 17 2012  rafael higueros  <contact@rafaelhigueros.com>
+
+    *bug fixes including: styling on IE, default footer copy link, custom logo img with no link, etc;files affected: category.php header.php, footer.php, style.css
+
+    *typos.
+
+    *add correct wp menu support, creates a "Header" menu right after activation, and menu can be handled via widgets.
+
+    *add SmartMetaBoxclass - thanks to Nikolay Yordanov<http://nyordanov.com/> (cool feature for devs)
+
+    *Styling Button Links With CSS3 - thanks too http://www.usabilitypost.com/
+
+    *add date.php
+
+    *category.php improvements
+
+    *image rendering improved for mobile devices.
+
+    *better theme options UI.
+
+*archives link option on theme options.
+

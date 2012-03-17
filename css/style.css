@@ -44,6 +44,7 @@ code {
     font-size: 14px;
 }
 
+/*Blockquote styling thanks to http://css-tricks.com/*/
 blockquote {
     background:#f9f9f9;
     border-left:10px solid #ccc;
@@ -63,6 +64,39 @@ blockquote:before {
 
 blockquote p {
     display:inline;
+}
+
+/*Button styling thanks to http://www.usabilitypost.com/2012/01/10/pressed-button-state-with-css3 */
+.button-link, button, input[type=submit] {
+    padding: 10px 15px;
+    background: #4479BA;
+    color: #FFF;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    border: solid 1px #20538D;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+    -webkit-transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+.button-link:hover, button:hover, input[type=submit]:hover {
+    background: #356094;
+    border: solid 1px #2A4E77;
+    text-decoration: none;
+}
+.button-link:active, button:active, input[type=submit]:active {
+    -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+    border: solid 1px #203E5F;
 }
 
 /* HEADINGS _____________________________________*/
@@ -240,12 +274,12 @@ ___________________________________________________________*/
     width: 60px;
 }
 
-#respond input, #respond textarea {
+#respond input[type=text], #respond textarea {
     background: #eee;
     border: none;
     padding: 5px;
 }
-#respond input:focus, #respond textarea:focus { background: #F4F6FB; }
+#respond input[type=text]:focus, #respond textarea:focus { background: #F4F6FB; }
 #respond textarea { width: 80%;  }
 
 #respond #submit { 

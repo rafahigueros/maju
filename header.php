@@ -60,6 +60,8 @@ $options = get_option('maju_theme_options');
 	<style>
 	    a { color: <?php echo $options['links_color']; ?> !important; }
 	    a:hover { color: <?php echo $options['links_hover']; ?> !important; }
+	    .button-link, button, input[type=submit]{ background: <?php echo $options['links_color']; ?> !important; }
+	    .button-link:hover, button:hover, input[type=submit]:hover{ background: <?php echo $options['links_hover']; ?> !important; }
 	</style>
 	<?php } ?>
 	
@@ -97,7 +99,8 @@ $options = get_option('maju_theme_options');
 	    <a id="logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php bloginfo('name'); ?>"><img alt="<?php bloginfo('name'); ?>" title="<?php bloginfo('name'); ?>" src="<?php echo $options['logo_url']; ?>" /></a><!-- If set, logo will be here -->
 	    <?php } ?>
 	    <nav>
-		<?php wp_nav_menu( array('menu' => 'Header', 'menu_class' => 'menu' )); ?>	
+		<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Default Navigation") ) : ?>
+		<?php endif; ?>
 	    </nav>
 	</header><!-- #END Header -->
 
