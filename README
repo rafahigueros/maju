@@ -45,6 +45,7 @@ Go to Appearance => Theme Options. For developers, you can add more config. opti
 Twitter user name will be used on the tweet button at the end of every post. G+, facebook, Pinterest and others might be added on future releases.
 
 Change log
+-------------
 
     v1.1  Mar 17 2012  rafael higueros  <contact@rafaelhigueros.com>
 
@@ -66,5 +67,5 @@ Change log
 
     *better theme options UI.
 
-*archives link option on theme options.
+    *archives link option on theme options.
 
