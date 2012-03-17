@@ -24,7 +24,7 @@ get_header();  ?>
 		<?php endif; ?>
 		</article>
 
-		<div class="archives home">
+		<div class="archives">
 		    <h4><?php _e('Archives', 'maju') ?></h4>
 		    <ul>
 		    <?php
@@ -34,7 +34,12 @@ get_header();  ?>
 		    <?php while ($recentPosts->have_posts()) : $recentPosts->the_post(); ?>
 			<li><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><em><?php the_date('M d Y'); ?></em><?php the_title(); ?></a></li>
 		    <?php endwhile; wp_reset_query(); ?> 
-			<li><a href="<?php echo get_option('home') ?>/archives"><?php _e('View all posts &rarr;', 'maju') ?></a></li>
+		    <?php
+			$archives = $options['archives_page'];
+			if($archives == '') { } else {
+		    ?>
+			<li><a href="<?php echo get_option('home') ?>/<?php echo $archives; ?>"><?php _e('View all posts &rarr;', 'maju') ?></a></li>
+		    <?php } ?>
 		    </ul>
 		</div>	
 

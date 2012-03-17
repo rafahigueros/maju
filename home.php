@@ -27,7 +27,7 @@ get_header();  ?>
 		</article>
 		<?php endwhile; wp_reset_query(); ?> 
 
-		<div class="archives home">
+		<div class="archives">
 		    <h4><?php _e('Archives', 'maju') ?></h4>
 		    <ul>
 		    <?php

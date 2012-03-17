@@ -9,9 +9,7 @@
 //Get theme options
 $options = get_option('maju_theme_options');
 
-get_header();  ?>
-
-
+get_header(); ?>
 
 <script>
 (function(){
@@ -30,14 +28,13 @@ get_header();  ?>
 		</article>
 		<?php endwhile; else: ?>
 		<article class="notfound">
-		    <h1><?php _e('404', 'maju'); ?></h1>
-		    <p>Page not found</p>
+		    <h1><?php _e('404 ', 'maju'); ?><span>Page not found</span></h1> 
 		    <h5><?php _e('Try using the search form', 'maju') ?></h5>
 		    <?php get_search_form();  ?>
 		</article>
 		<?php endif; ?>
 
-		<div class="archives home">
+		<div class="archives">
 		    <h4><?php _e('Archives', 'maju') ?></h4>
 		    <ul>
 		    <?php
@@ -47,7 +44,12 @@ get_header();  ?>
 		    <?php while ($recentPosts->have_posts()) : $recentPosts->the_post(); ?>
 			<li><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><em><?php the_date('M d Y'); ?></em><?php the_title(); ?></a></li>
 		    <?php endwhile; wp_reset_query(); ?> 
-			<li><a href="<?php echo get_option('home') ?>/archives"><?php _e('View all posts &rarr;', 'maju') ?></a></li>
+		    <?php
+			$archives = $options['archives_page'];
+			if($archives == '') { } else {
+		    ?>
+			<li><a href="<?php echo get_option('home') ?>/<?php echo $archives; ?>"><?php _e('View all posts &rarr;', 'maju') ?></a></li>
+		    <?php } ?>
 		    </ul>
 		</div>
 

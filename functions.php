@@ -34,7 +34,18 @@
 
 
     //Nav Menues
-    add_theme_support( 'menus' );
+    add_action( 'init', 'register_navmenus' );
+    function register_navmenus() {
+	register_nav_menus( 
+	    array(
+		'Header' => __( 'Header Navigation' ),
+	    )
+	);
+	// Check if Header menu exists and make it if not
+	if ( !is_nav_menu( 'Header' )) {
+	    $menu_id = wp_create_nav_menu( 'Header' );
+	}
+    }
 
 
     //Excerpt limit function

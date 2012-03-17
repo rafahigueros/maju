@@ -97,7 +97,7 @@ $options = get_option('maju_theme_options');
 	    <a id="logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php bloginfo('name'); ?>"><img alt="<?php bloginfo('name'); ?>" title="<?php bloginfo('name'); ?>" src="<?php echo $options['logo_url']; ?>" /></a><!-- If set, logo will be here -->
 	    <?php } ?>
 	    <nav>
-		<?php wp_nav_menu( array('menu' => 'main menu', 'menu_class' => 'menu' )); ?>	
+		<?php wp_nav_menu( array('menu' => 'Header', 'menu_class' => 'menu' )); ?>	
 	    </nav>
 	</header><!-- #END Header -->
 
