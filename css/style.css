@@ -127,14 +127,8 @@ ___________________________________________________________*/
 
 /* Header
 ___________________________________________________________*/
-.js header #searchform {
-    display: none;
-    position: absolute;
-    right: 0px;
-    top: 95px;
-}
+#site-title { overflow: hidden;  }
 
-    #site-title { overflow: hidden;  }
     #site-title span {
 	float: left;
 	font-size: 14px;
@@ -142,9 +136,20 @@ ___________________________________________________________*/
     }
 	#site-title a { font-family: 'Asap','Lucida Grande', sans-serif; }
 
-    #logo img { width: 60%;  }
+#logo img { width: 60%;  }
 
-    header ul li { color: #4a768f; list-style-type: none; }
+header ul li { color: #4a768f; list-style-type: none; }
+    
+#show-search { cursor: pointer;  }
+
+.js header #searchform {
+    display: none;
+    position: absolute;
+    right: 0px;
+    top: 95px;
+}
+
+    #searchsubmit { padding: 3px 6px; }
 
 
 /* Content

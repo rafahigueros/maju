@@ -15,7 +15,7 @@ Features
 - Well commented (if not feel free to post me)
 - and more..
 
-Additionally , you can use it as a(very tiny) framework for your  projects; and you can get some support here on this page by using the comments form below.
+Additionally , you can use it as a(very tiny) framework for your  projects..
 
 Installation
 ------------
@@ -44,28 +44,39 @@ Go to Appearance => Theme Options. For developers, you can add more config. opti
 
 Twitter user name will be used on the tweet button at the end of every post. G+, facebook, Pinterest and others might be added on future releases.
 
-Change log
--------------
 
-    v1.1  Mar 17 2012  rafael higueros  <contact@rafaelhigueros.com>
+CHANGE LOG
+-------------------------
 
-    *bug fixes including: styling on IE, default footer copy link, custom logo img with no link, etc;files affected: category.php header.php, footer.php, style.css
+v1.2 Mar 18 2012 rafael higueros <contact@rafaelhigueros.com>
 
-    *typos.
+* Add Google analytics support on theme options page.
 
-    *add correct wp menu support, creates a "Header" menu right after activation, and menu can be handled via widgets.
+* Add custom css text box on theme options.
 
-    *add SmartMetaBoxclass - thanks to Nikolay Yordanov<http://nyordanov.com/> (cool feature for devs)
+* Add custom js text box on theme options.
 
-    *Styling Button Links With CSS3 - thanks too http://www.usabilitypost.com/
+*search system enhancements
 
-    *add date.php
 
-    *category.php improvements
+v1.1  Mar 17 2012  rafael higueros  <contact@rafaelhigueros.com>
 
-    *image rendering improved for mobile devices.
+*bug fixes including: styling on IE, default footer copy link, custom logo img with no link, etc;files affected: category.php header.php, footer.php, style.css
 
-    *better theme options UI.
+*typos.
 
-    *archives link option on theme options.
+*add correct wp menu support, creates a "Header" menu right after activation, and menu can be handled via widgets.
 
+*add SmartMetaBoxclass - thanks to Nikolay Yordanov<http://nyordanov.com/> (cool feature for devs)
+
+*Styling Button Links With CSS3 - thanks too http://www.usabilitypost.com/
+
+*add date.php
+
+*category.php improvements
+
+*image rendering improved for mobile devices.
+
+*better theme options UI.
+
+*archives link option on theme options.

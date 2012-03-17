@@ -53,18 +53,26 @@ $options = get_option('maju_theme_options');
 	    <link rel="stylesheet" href="<?php bloginfo('template_url');?>/css/720.css" />
 	</noscript>
 	<link href='http://fonts.googleapis.com/css?family=Asap' rel='stylesheet' type='text/css'><!-- Google Font Used on titles -->
-	
+		
 	<?php
 	//If set on theme options panel change links color
-	if($options['links_color'] == '') { } else { ?>
+	if($options['links_color'] == '') { } else { ?><!-- Custom links color  -->
 	<style>
-	    a { color: <?php echo $options['links_color']; ?> !important; }
-	    a:hover { color: <?php echo $options['links_hover']; ?> !important; }
+	    a, #show-search { color: <?php echo $options['links_color']; ?> !important; }
+	    a:hover, #show-search:hover { color: <?php echo $options['links_hover']; ?> !important; }
 	    .button-link, button, input[type=submit]{ background: <?php echo $options['links_color']; ?> !important; }
 	    .button-link:hover, button:hover, input[type=submit]:hover{ background: <?php echo $options['links_hover']; ?> !important; }
-	</style>
-	<?php } ?>
+	</style><?php } ?>
 	
+
+	<?php
+	//Custom CSS here if any
+	if($options['custom_css'] == '') { } else { ?><!-- Custom CSS -->
+	<style>
+	<?php echo $options['custom_css']; ?>  
+	</style><?php } ?>
+
+
 	<!-- SEO (Custom SEO can be placed here)-->
 	<meta name="description" content="<?php bloginfo('description'); ?>" />	
 	<link rel='canonical' href='<?php echo get_option('home'); ?>' />

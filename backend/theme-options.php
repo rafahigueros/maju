@@ -126,6 +126,27 @@ function theme_options_do_page() {
 			</td>
 		    </tr>
 		    <tr valign="top">
+			<td scope="row" class="option_name"><?php _e( 'G analttics', 'maju' ); ?></td>
+			<td>
+			    <input id="maju_theme_options[g_a]" class="regular-text" type="text" name="maju_theme_options[g_a]" value="<?php esc_attr_e( $options['g_a'] ); ?>" />
+			    <span class="description">Insert G analytics like "UA-29723403-1"</span>
+			</td>
+		    </tr>
+		    <tr valign="top">
+			<td scope="row" class="option_name"><?php _e( 'Custom CSS', 'maju' ); ?></td>
+			<td>
+			    <textarea id="maju_theme_options[custom_css]" class="large-text code" name="maju_theme_options[custom_css]" cols="" rows="10px"><?php esc_attr_e( $options['custom_css'] ); ?></textarea>
+			    <span class="description">Add your own styles, use only if you know what you are doing.</span>
+			</td>
+		    </tr>
+		    <tr valign="top">
+			<td scope="row" class="option_name"><?php _e( 'Custom Javascript', 'maju' ); ?></td>
+			<td>
+			    <textarea id="maju_theme_options[custom_javascript]" class="large-text code" name="maju_theme_options[custom_javascript]" cols="" rows="10px"><?php echo stripslashes(htmlspecialchars($options['custom_javascript'])); ?></textarea>
+			    <span class="description">Add your own scripts, use only if you know what you are doing.</span>
+			</td>
+		    </tr>
+		    <tr valign="top">
 			<td colspan="2">
 			    <p class="submit">
 				<input type="submit" class="button-primary" value="<?php _e( 'Save Options', 'maju' ); ?>" />
@@ -152,15 +173,24 @@ function theme_options_validate( $input ) {
 	// Image Logo
 	$input['logo_url'] = wp_filter_nohtml_kses( $input['logo_url'] );
 
+	// Favico URL
+	$input['favicor_url'] = wp_filter_nohtml_kses( $input['favico_url'] );
+
+	// Apple Touch Icon URL
+	$input['apple_url'] = wp_filter_nohtml_kses( $input['apple_url'] );
+
+	// Links Color
+	$input['links_color'] = wp_filter_nohtml_kses( $input['links_color'] );
+	$input['links_hover'] = wp_filter_nohtml_kses( $input['links_hover'] );
+
 	// Post Number
 	$input['post_num'] = wp_filter_nohtml_kses( $input['post_num'] );
 
 	// Twitter username
 	$input['tw_user'] = wp_filter_nohtml_kses( $input['tw_user'] );
 
-	// Links Color
-	$input['links_color'] = wp_filter_nohtml_kses( $input['links_color'] );
-	$input['links_hover'] = wp_filter_nohtml_kses( $input['links_hover'] );
+	//Google Analytics
+	$input['g_a'] = wp_filter_nohtml_kses( $input['g_a'] );
 
 	// Footer Copy
 	$input['footer_copy'] = wp_filter_nohtml_kses( $input['footer_copy'] );
@@ -168,11 +198,9 @@ function theme_options_validate( $input ) {
 	// Archives Page
 	$input['archives_page'] = wp_filter_nohtml_kses( $input['archives_page'] );
 
-	// Favico URL
-	$input['favicor_url'] = wp_filter_nohtml_kses( $input['favico_url'] );
-
-	// Apple Touch Icon URL
-	$input['apple_url'] = wp_filter_nohtml_kses( $input['apple_url'] );
+	//Custom CSS
+	$input['custom_css'] = wp_filter_post_kses( $input['custom_css'] );
+	$input['custom_javascript'] = wp_filter_post_kses( $input['custom_javascript'] );
 
 	return $input;
 }

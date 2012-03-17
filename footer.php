@@ -54,11 +54,13 @@ get_header();  ?>
 	    //If Javascript is enabled add a "js" class
 	    $('html').addClass('js');
 
+
 	    //Back to top
 	    $('a#back-top').on('click', function(){
 		$('html, body').animate({scrollTop: '0px'}, 300);
 		return false;
 	    });
+
 
 	    // Add search form
 	    $('<li></li>',{
@@ -76,12 +78,31 @@ get_header();  ?>
 	    $('form#commentform p.comment-form-author label').append(reqname);
 	    $('form#commentform p.comment-form-email label').append(reqmail);
 
+	    //Google Analytics code
+	    var _gaq = _gaq || [];
+	    _gaq.push(['_setAccount', '<?php echo $options['g_a']; ?>']);
+	    _gaq.push(['_trackPageview']);
+
+	    (function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	    })();
 
 	})();
     </script>
     <script src="<?php bloginfo('template_url'); ?>/js/adapt.min.js"></script>
 
     <?php wp_footer(); ?>
+
+    
+    <?php
+    //Custom JS here if any
+    if($options['custom_javascript'] == '') { } else { ?><!-- Custom JS if any -->
+    <script>
+    <?php echo stripslashes(htmlspecialchars($options['custom_javascript'])); ?>  
+    </script><?php } ?>
+
 	
 </body>
 </html>
