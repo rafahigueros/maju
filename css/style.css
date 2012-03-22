@@ -19,60 +19,109 @@ p, li {
 
 :focus	{ outline: 0; }
 
+code,
 pre {
-    overflow-x: auto;
-    font-family: "Menlo", Courier, monospace;
-    padding: 5%;
-    display: block;
-    margin-bottom: 25px;
-    font-size: 15px;
-    color: whiteSmoke;
-    background: #444;
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    border-radius: 0;
-    -moz-background-clip: padding;
-    -webkit-background-clip: padding-box;
-    background-clip: padding-box;
-    width: 90%;
-    margin: inherit;
+    padding: 0 3px 2px;
+    font-family: menlo, monaco, "courier new", monospace !important;
+    font-size: 12px;
+    color: #eee;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
 }
-
 code {
-    background: #eee;
-    font-family: "Menlo", Courier, monospace; 
+    padding: 2px 4px;
+    color: #d14;
+    background-color: #f7f7f9;
+    border: 1px solid #e1e1e8;
+}
+pre span {  font-family: menlo, monaco, "courier new", monospace !important; }
+pre {
+    display: block;
+    padding: 8.5px;
+    margin: 0 0 9px;
     font-size: 14px;
+    line-height: 18px;
+    background-color: #222;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    white-space: pre;
+    white-space: pre-wrap;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+pre.prettyprint {
+    margin-bottom: 18px;
+}
+pre code {
+    padding: 0;
+    color: inherit;
+    background-color: transparent;
+    border: 0;
 }
 
-/*Blockquote styling thanks to http://css-tricks.com/*/
+
+/* BLOCKQUOTE STYLING THANKS TO TWITTER BOOTSTRAP*/
 blockquote {
-    background:#f9f9f9;
-    border-left:10px solid #ccc;
-    margin:1.5em 10px;
-    padding:.5em 10px;
-    quotes:"\201C""\201D""\2018""\2019";
+  padding: 0 0 0 15px;
+  margin: 0 0 18px;
+  border-left: 5px solid #eeeeee;
 }
-
-blockquote:before {
-    color:#ccc;
-    content:open-quote;
-    font-size:4em;
-    line-height:.1em;
-    margin-right:.25em;
-    vertical-align:-.4em;
-}
-
 blockquote p {
-    display:inline;
+  margin-bottom: 0;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 22.5px;
+}
+blockquote small {
+  display: block;
+  line-height: 18px;
+  color: #999999;
+}
+blockquote small:before {
+  content: '\2014 \00A0';
+}
+blockquote.pull-right {
+  float: right;
+  padding-left: 0;
+  padding-right: 15px;
+  border-left: 0;
+  border-right: 5px solid #eeeeee;
+}
+blockquote.pull-right p,
+blockquote.pull-right small {
+  text-align: right;
+}
+q:before,
+q:after,
+blockquote:before,
+blockquote:after {
+  content: "";
+}
+address {
+  display: block;
+  margin-bottom: 18px;
+  line-height: 18px;
+  font-style: normal;
+}
+small {
+  font-size: 100%;
+}
+cite {
+  font-style: normal;
 }
 
-/*Button styling thanks to http://www.usabilitypost.com/2012/01/10/pressed-button-state-with-css3 */
-.button-link, button, input[type=submit] {
-    padding: 10px 15px;
+/*BUTTON STYLING THANKS TO USABILITYPOST.COM  http://www.usabilitypost.com/2012/01/10/pressed-button-state-with-css3 */
+.btn, a.btn,  button, input[type=submit] {
+    padding: 5px 15px;
     background: #4479BA;
     color: #FFF !important;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
+    height: auto;
     border-radius: 4px;
     border: solid 1px #20538D;
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
@@ -87,16 +136,85 @@ blockquote p {
     -ms-user-select:none;
     user-select:none;
 }
-.button-link:hover, button:hover, input[type=submit]:hover {
+.btn:hover, a.btn:hover, button:hover, input[type=submit]:hover {
     background: #356094;
     border: solid 1px #2A4E77;
     text-decoration: none;
 }
-.button-link:active, button:active, input[type=submit]:active {
+.btn:active, a.btn:hover, button:active, input[type=submit]:active {
     -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
     -moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
     box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
     border: solid 1px #203E5F;
+}
+
+/* INPUTS, TEXTAREAS _____________________________________*/
+input,
+textarea,
+select,
+.uneditable-input {
+  display: inline-block;
+  padding: 4px;
+  margin-bottom: 9px;
+  font-size: 13px;
+  line-height: 18px;
+  color: #555555;
+  border: 1px solid #cccccc;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+input,
+textarea {
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+  -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+  -ms-transition: border linear 0.2s, box-shadow linear 0.2s;
+  -o-transition: border linear 0.2s, box-shadow linear 0.2s;
+  transition: border linear 0.2s, box-shadow linear 0.2s;
+}
+input:focus,
+textarea:focus {
+  border-color: rgba(82, 168, 236, 0.8);
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+  outline: 0;
+  outline: thin dotted \9;
+  /* IE6-9 */
+
+}
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus,
+select:focus {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.input-mini {
+  width: 60px;
+}
+.input-small {
+  width: 90px;
+}
+.input-medium {
+  width: 150px;
+}
+.input-large {
+  width: 210px;
+}
+.input-xlarge {
+  width: 270px;
+}
+.input-xxlarge {
+  width: 530px;
 }
 
 /* HEADINGS _____________________________________*/
@@ -121,9 +239,6 @@ ___________________________________________________________*/
 #wrapper {
     position: relative;
 }
-
-.current-cat a { color: #0095da; font-weight: bold;  }
-
 
 /* Header
 ___________________________________________________________*/
@@ -229,8 +344,6 @@ article { padding: 0 0 30px 0;  }
     }
 
 
-
-
 /* Sidebar
 ___________________________________________________________*/
 #sidebar { 
@@ -271,41 +384,28 @@ ___________________________________________________________*/
     width: 100%;
 }
 
-#respond label {
-    float: left;
-    margin: 0 30px 0 0;
-    text-align: right;
-    width: 60px;
-}
+    #respond label {
+	float: left;
+	margin: 0 30px 0 0;
+	text-align: right;
+	width: 60px;
+    }
 
-#respond input[type=text], #respond textarea {
-    background: #eee;
-    border: none;
-    padding: 5px;
-}
-#respond input[type=text]:focus, #respond textarea:focus { background: #F4F6FB; }
-#respond textarea { width: 80%;  }
-
-#respond #submit { 
-    background: #4A768F; 
-    color: #fff; 
-    cursor: pointer; 
-}
-#respond #submit:hover { background: #454545; color: #fff; }
+    #respond textarea { width: 80%;  }
 
 .commentlist {
     list-style-type: none;
     padding: 0;
 }
-.comment {
-    background: #f9f9f9;
-    margin: 10px 0;
-    padding: 20px;
-}
-.comment.byuser { background: #f2fcff !important; }
-.comment.even { background: none; }
-.comment.depth-3 { background: #f9f9f9;  }
-.vcard img {
-    float: left;
-    margin: 0 20px 20px 0;
-}
+    .comment {
+	background: #f9f9f9;
+	margin: 10px 0;
+	padding: 20px;
+    }
+    .comment.byuser { background: #f2fcff !important; }
+    .comment.even { background: none; }
+    .comment.depth-3 { background: #f9f9f9;  }
+    .vcard img {
+	float: left;
+	margin: 0 20px 20px 0;
+    }

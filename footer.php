@@ -89,6 +89,7 @@ get_header();  ?>
 	})();
     </script>
     <script src="<?php bloginfo('template_url'); ?>/js/adapt.min.js"></script>
+    <script src="<?php bloginfo('template_url'); ?>/js/prettify.js"></script>
 
     <?php wp_footer(); ?>
 

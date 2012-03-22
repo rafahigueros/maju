@@ -49,6 +49,7 @@ $options = get_option('maju_theme_options');
     <!-- StyleSheets -->
     <link rel="stylesheet" href="<?php bloginfo('template_url');?>/css/style.css" media="screen" />
     <link rel="stylesheet" href="<?php bloginfo('template_url');?>/css/tables.css" media="screen" />
+    <link rel="stylesheet" href="<?php bloginfo('template_url');?>/css/prettify.css" media="screen" />
     <noscript>
 	<link rel="stylesheet" href="<?php bloginfo('template_url');?>/css/720.css" />
     </noscript>
@@ -96,7 +97,7 @@ $options = get_option('maju_theme_options');
     <?php wp_head(); ?>
 
 </head>
-<body>
+<body onload="prettyPrint()">
 
     <div id="wrapper" class="container_12">
 
