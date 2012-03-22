@@ -2,8 +2,8 @@
 
 /*
     Backend options 
-    theme: maju by rafaelhigueros.me | scream.ws
-    v: 1.0
+    theme: maju by rafaelhigueros.com | scream.ws
+    v: 1.2
 */
 
 add_action( 'admin_init', 'theme_options_init' );
@@ -135,7 +135,7 @@ function theme_options_do_page() {
 		    <tr valign="top">
 			<td scope="row" class="option_name"><?php _e( 'Custom CSS', 'maju' ); ?></td>
 			<td>
-			    <textarea id="maju_theme_options[custom_css]" class="large-text code" name="maju_theme_options[custom_css]" cols="" rows="10px"><?php esc_attr_e( $options['custom_css'] ); ?></textarea>
+			    <textarea id="maju_theme_options[custom_css]" class="large-text code" name="maju_theme_options[custom_css]" cols="" rows="10px"><?php echo stripslashes(htmlspecialchars($options['custom_css'] )); ?></textarea>
 			    <span class="description">Add your own styles, use only if you know what you are doing.</span>
 			</td>
 		    </tr>

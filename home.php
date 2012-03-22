@@ -2,8 +2,8 @@
 
 /*
     Index/main template 
-    theme: maju by rafaelhigueros.me | scream.ws
-    v: 1.0
+    theme: maju by rafaelhigueros.com | scream.ws
+    v: 1.2
 */
 
 //Get theme options
@@ -22,7 +22,7 @@ get_header();  ?>
 		?>
 		<?php while ($recentPosts->have_posts()) : $recentPosts->the_post(); ?>
 		<article> 
-		    <h1 class="title"><a href="<? the_permalink();?>" title="<?php the_title();  ?>"><?php the_title(); ?></a></h1>
+		    <h1 class="title"><a href="<? the_permalink();?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h1>
 		    <?php the_content(); ?>
 		</article>
 		<?php endwhile; wp_reset_query(); ?> 
@@ -41,7 +41,7 @@ get_header();  ?>
 			$archives = $options['archives_page'];
 			if($archives == '') { } else {
 		    ?>
-			<li><a href="<?php echo get_option('home') ?>/<?php echo $archives; ?>"><?php _e('View all posts &rarr;', 'maju') ?></a></li>
+			<li class="view-all-posts"><a href="<?php echo get_option('home') ?>/<?php echo $archives; ?>"><?php _e('View all posts &rarr;', 'maju') ?></a></li>
 		    <?php } ?>
 		    </ul>
 		</div>

@@ -70,7 +70,7 @@ blockquote p {
 .button-link, button, input[type=submit] {
     padding: 10px 15px;
     background: #4479BA;
-    color: #FFF;
+    color: #FFF !important;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
@@ -145,7 +145,7 @@ header ul li { color: #4a768f; list-style-type: none; }
 .js header #searchform {
     display: none;
     position: absolute;
-    right: 0px;
+    right: 7px;
     top: 95px;
 }
 
@@ -169,6 +169,9 @@ article { padding: 0 0 30px 0;  }
 	width: 100%;
     }
 
+    article .size-medium { max-width: 450px; width: auto !important;}
+    article .size-small { max-width: 250px; width: auto !important;}
+
     article .wp-caption {
 	background: #eee;
 	max-width: 520px !important;
@@ -181,23 +184,16 @@ article { padding: 0 0 30px 0;  }
 
     article.notfound img { margin: 0 30px 30px 0; }
     article.notfound h1 { font-size: 40px; }
-    article.notfound h1 span { font-size: 20px; }
+    article.notfound h1 span { font-family: 'Asap','Lucida Grande', sans-serif; font-size: 20px; }
 
+    .post-meta {
+	background: #f9f9f9;
+	display: inline-block;
+	margin: 20px 0 0 0;
+	padding: 5px 20px;
+    }
 
-.archives.home { margin: 30px 0 0 0; }
-    .archives ul { 
-	list-style-type: none; 
-	padding: 0;
-    }
-    .archives ul li { 
-	border-bottom: 1px dotted #ccc;
-	padding: 8px 0;
-    }
-    .archives ul li em { 
-	font-size: 12px; 
-	padding: 0 30px 0 0;
-	text-transform: uppercase;  
-    }
+	.post-date { float: right;  }
 
 .tags-name {
     overflow: hidden;
@@ -217,17 +213,22 @@ article { padding: 0 0 30px 0;  }
 	font-family: 'Asap','Lucida Grande', sans-serif;
     }
 
-.singlepost-ad { 
-    border-top: 1px dashed #ccc;
-    float: left; 
-    padding: 30px 0 0 0;
-}
-
-    .singlepost-ad h5 { margin: 0 0 10px 0;  }
-    .singlepost-ad img {
-	float: left;
-	margin: 0 20px 0 0;
+.archives.home { margin: 30px 0 0 0; }
+    .archives ul { 
+	list-style-type: none; 
+	padding: 0;
     }
+    .archives ul li { 
+	border-bottom: 1px dotted #ccc;
+	padding: 8px 0;
+    }
+    .archives ul li em { 
+	font-size: 12px; 
+	padding: 0 30px 0 0;
+	text-transform: uppercase;  
+    }
+
+
 
 
 /* Sidebar
@@ -248,8 +249,6 @@ ___________________________________________________________*/
 	    padding: 0 0 0 10px;
 	}
 	#sidebar .sidebar-box h5 { line-height: normal !important; margin: 0; }
-	#sidebar #rotating-adds p { color: #999; font-size: 14px; margin-top: 5px; }
-	#sidebar #social ul { list-style-type: none; padding: 0 0 0 20px; }
 
 
 /* Footer

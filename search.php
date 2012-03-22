@@ -2,8 +2,8 @@
 
 /*
     Search results page template 
-    theme: maju by rafaelhigueros.me | scream.ws
-    v: 1.0
+    theme: maju by rafaelhigueros.com | scream.ws
+    v: 1.2
 */
 
 //Get theme options
@@ -42,7 +42,7 @@ get_header();  ?>
 			    $archives = $options['archives_page'];
 			    if($archives == '') { } else {
 			?>
-			    <li><a href="<?php echo get_option('home') ?>/<?php echo $archives; ?>"><?php _e('View all posts &rarr;', 'maju') ?></a></li>
+			    <li class="view-all-posts"><a href="<?php echo get_option('home') ?>/<?php echo $archives; ?>"><?php _e('View all posts &rarr;', 'maju') ?></a></li>
 			<?php } ?>
 			</ul>
 		    </div>

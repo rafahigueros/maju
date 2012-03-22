@@ -2,8 +2,8 @@
 
 /*
     Template Name: Archive
-    theme: maju by rafaelhigueros.me | scream.ws
-    v: 1.0
+    theme: maju by rafaelhigueros.com | scream.ws
+    v: 1.2
 */
 
 //Get theme options
