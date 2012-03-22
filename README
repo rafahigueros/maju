@@ -48,6 +48,14 @@ Twitter user name will be used on the tweet button at the end of every post. G+,
 CHANGE LOG
 -------------------------
 
+v1.2.1 Mar 22 2012 rafael higueros <contact@rafaelhigueros.com>
+
+* Support rich snipets via schema.org for authors
+
+* More SEO friendly structure
+
+* New pre/code styles thanks to twitter bootstrap and syntax highlighting via google-code-prettify
+
 v1.2 Mar 18 2012 rafael higueros <contact@rafaelhigueros.com>
 
 * Add Google analytics support on theme options page.

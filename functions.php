@@ -1,6 +1,7 @@
 <?php
 
     //Theme Functions here.
+    //theme: maju by rafaelhigueros.com <contact@rafaelhigueros.com>
 
     //Editor Style
     add_editor_style();

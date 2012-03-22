@@ -2,8 +2,7 @@
 
 /*
     404 / Not found 
-    theme: maju by rafaelhigueros.com | scream.ws
-    v: 1.2
+    theme: maju by rafaelhigueros.com <contact@rafaelhigueros.com>
 */
 
 //Get theme options
