@@ -11,22 +11,19 @@ ol, ul, li, form, label {
 
 /* LE GENERAL STYLES
 ___________________________________________________________*/
-#wrapper {
-    position: relative;
+body { 
+    background: #fefeff; 
+    color: #505050;
 }
 
-p, li { 
-    color: #454545; 
-    line-height: 25px;
-}
+#wrapper { position: relative; }
 
-:focus	{ outline: 0; }
+p, li { line-height: 25px; }
 
-
+:focus { outline: 0; }
 
 /* LE PRE & CODE TAGS */
-code,
-pre {
+code, pre {
     padding: 0 3px 2px;
     font-family: menlo, monaco, "courier new", monospace !important;
     font-size: 12px;
@@ -41,14 +38,13 @@ code {
     background-color: #f7f7f9;
     border: 1px solid #e1e1e8;
 }
-pre span {  font-family: menlo, monaco, "courier new", monospace !important; }
 pre {
     display: block;
     padding: 15px 8.5px;
     margin: 0 0 9px;
     font-size: 14px;
     line-height: 18px;
-    background-color: #222;
+    background-color: #303030;
     border: 1px solid #ccc;
     border: 1px solid rgba(0, 0, 0, 0.15);
     -webkit-border-radius: 4px;
@@ -56,9 +52,8 @@ pre {
     border-radius: 4px;
     overflow-x: auto;
 }
-pre.prettyprint {
-    margin-bottom: 18px;
-}
+    pre span { font-family: menlo, monaco, "courier new", monospace !important }
+    pre.prettyprint { margin-bottom: 18px }
 pre code {
     padding: 0;
     color: inherit;
@@ -68,56 +63,50 @@ pre code {
 
 /* LE BLOCKQUOTE STYLING THANKS TO TWITTER BOOTSTRAP */
 blockquote {
-  padding: 0 0 0 15px;
-  margin: 0 0 18px;
-  border-left: 5px solid #eeeeee;
+    padding: 0 0 0 15px;
+    margin: 0 0 18px;
+    border-left: 5px solid #eeeeee;
 }
 blockquote p {
-  margin-bottom: 0;
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 22.5px;
+    margin-bottom: 0;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 22.5px;
 }
 blockquote small {
-  display: block;
-  line-height: 18px;
-  color: #999999;
+    display: block;
+    line-height: 18px;
+    color: #999999;
 }
 blockquote small:before {
-  content: '\2014 \00A0';
+    content: '\2014 \00A0';
 }
 blockquote.pull-right {
-  float: right;
-  padding-left: 0;
-  padding-right: 15px;
-  border-left: 0;
-  border-right: 5px solid #eeeeee;
+    float: right;
+    padding-left: 0;
+    padding-right: 15px;
+    border-left: 0;
+    border-right: 5px solid #eeeeee;
 }
 blockquote.pull-right p,
 blockquote.pull-right small {
-  text-align: right;
+    text-align: right;
 }
 q:before,
 q:after,
 blockquote:before,
 blockquote:after {
-  content: "";
+    content: "";
 }
 address {
-  display: block;
-  margin-bottom: 18px;
-  line-height: 18px;
-  font-style: normal;
-}
-small {
-  font-size: 100%;
-}
-cite {
-  font-style: normal;
+    display: block;
+    margin-bottom: 18px;
+    line-height: 18px;
+    font-style: normal;
 }
 
 /* LE BUTTON STYLING THANKS TO USABILITYPOST.COM  http://www.usabilitypost.com/2012/01/10/pressed-button-state-with-css3 */
-.btn, a.btn,  button, input[type=submit] {
+.btn, a.btn, button, input[type=submit] {
     padding: 5px 15px;
     background: #4479BA;
     color: #FFF !important;
@@ -156,73 +145,61 @@ input,
 textarea,
 select,
 .uneditable-input {
-  display: inline-block;
-  padding: 4px;
-  margin-bottom: 9px;
-  font-size: 13px;
-  line-height: 18px;
-  color: #555555;
-  border: 1px solid #cccccc;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
+    display: inline-block;
+    padding: 4px;
+    margin-bottom: 9px;
+    font-size: 13px;
+    line-height: 18px;
+    color: #555555;
+    border: 1px solid #cccccc;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
 }
 
 input[type=text],
 input[type=password],
 textarea {
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
-  -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
-  -ms-transition: border linear 0.2s, box-shadow linear 0.2s;
-  -o-transition: border linear 0.2s, box-shadow linear 0.2s;
-  transition: border linear 0.2s, box-shadow linear 0.2s;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+    -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+    -ms-transition: border linear 0.2s, box-shadow linear 0.2s;
+    -o-transition: border linear 0.2s, box-shadow linear 0.2s;
+    transition: border linear 0.2s, box-shadow linear 0.2s;
 }
 input:focus,
 textarea:focus {
-  border-color: rgba(82, 168, 236, 0.8);
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
-  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
-  outline: 0;
-  outline: thin dotted \9;
-  /* IE6-9 */
-
+    border-color: rgba(82, 168, 236, 0.8);
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+    outline: 0;
+    outline: thin dotted \9;
+    /* IE6-9 */
 }
 input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus,
 select:focus {
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-  outline: thin dotted #333;
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    outline: thin dotted #333;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
 }
-.input-mini {
-  width: 60px;
-}
-.input-small {
-  width: 90px;
-}
-.input-medium {
-  width: 150px;
-}
-.input-large {
-  width: 210px;
-}
-.input-xlarge {
-  width: 270px;
-}
-.input-xxlarge {
-  width: 530px;
-}
+.input-mini	{ width: 60px; }
+.input-small	{ width: 90px; }
+.input-medium	{ width: 150px; }
+.input-large	{ width: 210px; }
+.input-xlarge	{ width: 270px; }
+.input-xxlarge	{ width: 530px; }
 
 /* LE HEADINGS _____________________________________ */
-h1, h2, h3, h4, h5, h6 { font-family: 'Asap','Lucida Grande', sans-serif; line-height: 40px; }
+h1, h2, h3, h4, h5, h6,
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{ font-family: 'Asap','Lucida Grande', sans-serif; line-height: 40px; }
 h1 { font-size: 36px; }
 h2 { font-size: 28px; }
 h3 { font-size: 24px; }
@@ -231,30 +208,31 @@ h5 { font-size: 16px; }
 h6 { font-size: 14px; }
 
 /* LE LINKS _____________________________________ */
-a	    { text-decoration: none;  }
+a	    { text-decoration: none; }
 a:link 	    { color: #4a768f; }
 a:visited   { color: #4a768f; }
 a:hover     { color: #0095da; }
 a:active    { color: #000; }
 
 
-
 /* LE HEADER
 ___________________________________________________________*/
-#site-title { overflow: hidden;  }
-
+#site-title { overflow: hidden }
     #site-title span {
-	float: left;
-	font-size: 14px;
-	width: 100%;
+        float: left;
+        font-size: 14px;
+        width: 100%;
     }
-	#site-title a { font-family: 'Asap','Lucida Grande', sans-serif; }
-
-#logo img { width: 60%;  }
-
-header ul li { color: #4a768f; list-style-type: none; }
+    #site-title a { font-family: 'Asap','Lucida Grande', sans-serif }
     
-#show-search { cursor: pointer;  }
+#logo img { width: 60% }
+
+    nav ul li {
+	color: #4a768f;
+	list-style-type: none;
+    }
+
+#show-search { cursor: pointer }
 
 .js header #searchform {
     display: none;
@@ -263,105 +241,148 @@ header ul li { color: #4a768f; list-style-type: none; }
     top: 95px;
 }
 
-    #searchsubmit { padding: 3px 6px; }
+#searchsubmit { padding: 3px 6px }
 
 
 /* LE CONTENT
 ___________________________________________________________*/
-article { padding: 0 0 30px 0;  }
-    article h1 a { font-family: 'Asap','Lucida Grande', sans-serif; }
+article { padding: 0 0 30px 0 }
     article img {
-	height: auto;
-	max-width: 520px;
-	width: 100%; 
+        height: auto;
+        max-width: 520px;
+        width: 100%;
     }
-    article img.alignright, .wp-caption.alignright { float: right; margin: 10px 0 10px 20px ; }
-    article img.alignleft, .wp-caption.alignleft { float: left; margin: 10px 20px 10px 0; }
-    article img.wp-post-image { 
-	float: left; 
-	margin: 10px 30px 10px 0; 
+    article img.alignright, .wp-caption.alignright {
+        float: right;
+        margin: 10px 0 10px 20px;
+    }
+    article img.alignleft, .wp-caption.alignleft {
+        float: left;
+        margin: 10px 20px 10px 0;
+    }
+    article img.wp-post-image {
+        float: left;
+        margin: 10px 20px 10px 0;
+	max-width: 380px;
+        width: auto;
+    }
+    article .size-medium {
+        max-width: 450px;
+        width: auto !important;
+    }
+    article .size-small {
+        max-width: 250px;
+        width: auto !important;
+    }
+    article .wp-caption {
+        background: #eee;
+        max-width: 520px !important;
+        padding-top: 5px;
+        text-align: center;
+    }
+        article .wp-caption img { max-width: 500px !important }
+        article .wp-caption img.size-medium { max-width: 450px !important }
+        article .wp-caption img.size-small { max-width: 250px !important }
+    article .wp-caption-text { margin: -5px 0 0 0 }
+
+    article .gallery {
+	margin: auto;
+	/*article .gallery clearing*/
+	overflow: hidden;
 	width: 100%;
     }
+	article .gallery .gallery-item {
+	    float: left;
+	    margin: 0 1% 0 0;
+	    text-align: center;
+	}
 
-    article .size-medium { max-width: 450px; width: auto !important;}
-    article .size-small { max-width: 250px; width: auto !important;}
+	article .gallery a {
+	    float: left;
+	    width: 100%;
+	}
+	article .gallery .gallery-caption { margin-left: 0; }
+	article .gallery br { clear: both }
+	/* available Columns */
+	.gallery-columns-2 dl { width: 48% }
+	.gallery-columns-3 dl { width: 30% }
+	.gallery-columns-4 dl { width: 24% }
+	.gallery-columns-5 dl { width: 19% }
+	.gallery-columns-6 dl { width: 15.666% }
+	.gallery-columns-7 dl { width: 13.285% }
+	.gallery-columns-8 dl { width: 11.7% }
+	.gallery-columns-9 dl { width: 10.111% }
 
-    article .wp-caption {
-	background: #eee;
-	max-width: 520px !important;
-	padding-top: 5px;
-	text-align: center;
+
+article.notfound img { margin: 0 30px 30px 0 }
+article.notfound h1 { font-size: 40px }
+    article.notfound h1 span {
+        font-family: 'Asap','Lucida Grande', sans-serif;
+        font-size: 20px;
     }
-    article .wp-caption img { max-width: 500px !important;  }
-    article .wp-caption img.size-medium { max-width: 450px !important;  }
-    article .wp-caption img.size-small { max-width: 250px !important;  }
-    article .wp-caption-text { margin: -5px 0 0 0; }
-
-    article.notfound img { margin: 0 30px 30px 0; }
-    article.notfound h1 { font-size: 40px; }
-    article.notfound h1 span { font-family: 'Asap','Lucida Grande', sans-serif; font-size: 20px; }
-
-    .post-meta {
-	background: #f9f9f9;
-	display: inline-block;
-	margin: 20px 0 0 0;
-	padding: 5px 20px;
-    }
-
-	.post-date { float: right;  }
-
-.tags-name {
-    overflow: hidden;
+    
+.post-meta {
+    background: #f9f9f9;
+    display: inline-block;
+    margin: 20px 0 0 0;
+    padding: 5px 5%;
+    width: 90%;
 }
-    .post-categories {
-	display: inline-block;
-	margin: 0;
-	padding: 0;
-	width: auto;
-    }
+.post-date { float: right }
+
+.tags-name { overflow: hidden }
+
+.post-categories {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    width: auto;
+}
     .post-categories li {
-	float: left;
-	line-height: 14px;
-	list-style-type: none;
+        float: left;
+        line-height: 14px;
+        list-style-type: none;
     }
-    .post-categories li a {
-	font-family: 'Asap','Lucida Grande', sans-serif;
-    }
+        .post-categories li a { font-family: 'Asap','Lucida Grande', sans-serif }
+        
+.archives.home { margin: 30px 0 0 0 }
 
-.archives.home { margin: 30px 0 0 0; }
-    .archives ul { 
-	list-style-type: none; 
-	padding: 0;
+.archives ul {
+    list-style-type: none;
+    padding: 0;
+}
+    .archives ul li {
+        border-bottom: 1px dotted #ccc;
+        padding: 8px 0;
     }
-    .archives ul li { 
-	border-bottom: 1px dotted #ccc;
-	padding: 8px 0;
-    }
-    .archives ul li em { 
-	font-size: 12px; 
-	padding: 0 30px 0 0;
-	text-transform: uppercase;  
-    }
-
+        .archives ul li em {
+	    float: left;
+            font-size: 12px;
+            padding: 0 30px 0 0;
+	    margin-bottom: 5px;
+            text-transform: uppercase;
+        }
 
 /* LE SIDEBAR
 ___________________________________________________________*/
-#sidebar { 
-    padding: 40px 0 0 0; 
-    overflow: hidden; 
+#sidebar {
+    padding: 40px 0 0 0;
+    overflow: hidden;
 }
-
     #sidebar .sidebar-box {
-	border-bottom: 1px dashed #e1e1e1;
-	float: right;
-	margin-bottom: 30px !important;
-	width: 130px;
+        border-bottom: 1px dashed #e1e1e1;
+        float: right;
+        margin-bottom: 30px !important;
+        width: 130px;
     }
-	#sidebar .sidebar-box ul {
-	    list-style-type: none;
-	    padding: 0 0 0 10px;
-	}
-	#sidebar .sidebar-box h5 { line-height: normal !important; margin: 0; }
+        #sidebar .sidebar-box ul {
+            list-style-type: none;
+            padding: 0 0 0 10px;
+        }
+        #sidebar .sidebar-box h5 {
+            line-height: normal !important;
+            margin: 0;
+        }
 
 
 /* FOOTER
@@ -384,28 +405,36 @@ ___________________________________________________________*/
     width: 100%;
 }
 
-    #respond label {
-	float: left;
-	margin: 0 30px 0 0;
-	text-align: right;
-	width: 60px;
-    }
-
-    #respond textarea { width: 80%;  }
-
-.commentlist {
-    list-style-type: none;
-    padding: 0;
+#comments-title span {
+    font-family: 'Asap','Lucida Grande', sans-serif
 }
-    .comment {
-	background: #f9f9f9;
-	margin: 10px 0;
-	padding: 20px;
-    }
-    .comment.byuser { background: #f2fcff !important; }
-    .comment.even { background: none; }
-    .comment.depth-3 { background: #f9f9f9;  }
-    .vcard img {
-	float: left;
-	margin: 0 20px 20px 0;
-    }
+
+#respond label {
+    float: left;
+    margin: 0 30px 0 0;
+    text-align: right;
+    width: 60px;
+}
+#respond textarea { width: 80% }
+.commentlist { 
+    margin: 0;
+    padding: 0; 
+}
+.commentlist li {
+    list-style-type: none;
+}
+.comment {
+    background: #f9f9f9;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    margin: 10px 0;
+    padding: 20px;
+}
+.comment.byuser { background: #f2fcff !important }
+.comment.even { background: none }
+.comment.depth-3 { background: #f9f9f9 }
+.vcard img {
+    float: left;
+    margin: 0 20px 20px 0;
+}

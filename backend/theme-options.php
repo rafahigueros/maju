@@ -2,8 +2,7 @@
 
 /*
     Backend options 
-    theme: maju by rafaelhigueros.com | scream.ws
-    v: 1.2
+    theme: maju by rafaelhigueros.com <contact@rafaelhigueros.com>
 */
 
 add_action( 'admin_init', 'theme_options_init' );
@@ -59,7 +58,7 @@ function theme_options_do_page() {
 		<table class="form-table theme-options-wrap">
 		    <tr class="even">
 		        <td colspan="2">
-		            <h3>General View Options</h3>
+			    <h3><?php _e('General View Options', 'maju'); ?></h3>
 		        </td>
 		    </tr>
 		    <tr valign="top">
@@ -83,11 +82,12 @@ function theme_options_do_page() {
 		    <tr valign="top">
 			<td scope="row" class="option_name"><?php _e( 'Links color', 'maju' ); ?></td>
 			<td class="color">
-			    <span class="description">Links:</span>
+			    <span class="description"><?php _e('Links:', 'maju'); ?></span>
 			    <input id="maju_theme_options_links_color" class="small-text" type="text" name="maju_theme_options[links_color]" value="<?php esc_attr_e( $options['links_color'] ); ?>" />
-			    <span class="description">  Hover:</span>
+			    <span class="description"><?php _e('Hover:', 'maju'); ?></span>
 			    <input id="maju_theme_options_links_color_hover" class="small-text" type="text" name="maju_theme_options[links_hover]" value="<?php esc_attr_e( $options['links_hover'] ); ?>" />
-			    <span class="description"><?php _e('*leave fields blank to set default color, enter hex values or color name', 'maju'); ?></span>
+			    <br />
+			    <span class="description"><?php _e('Leave fields blank to set default color, enter hex values or color name', 'maju'); ?></span>
 			</td>
 		    </tr>
 		    <tr valign="top">
@@ -105,7 +105,28 @@ function theme_options_do_page() {
 			<td scope="row" class="option_name"><?php _e( 'Twitter user name', 'maju' ); ?></td>
 			<td>
 			    <input id="maju_theme_options[tw_user]" class="regular-text" type="text" name="maju_theme_options[tw_user]" value="<?php esc_attr_e( $options['tw_user'] ); ?>" />
-			    <span class="description">Will be used for Tweet button</span>
+			    <span class="description"><?php _e('Will be used for Tweet button', 'maju'); ?></span>
+			</td>
+		    </tr>
+		    <tr valign="top">
+			<td scope="row" class="option_name"><?php _e( 'Facebook App ID', 'maju' ); ?></td>
+			<td>
+			    <input id="maju_theme_options[fb_id]" class="regular-text" type="text" name="maju_theme_options[fb_id]" value="<?php esc_attr_e( $options['fb_id'] ); ?>" />
+			    <span class="description"><?php _e('You ne dd to create an fb app first', 'maju'); ?></span>
+			</td>
+		    </tr>
+		    <tr valign="top">
+			<td scope="row" class="option_name"><?php _e( 'Facebook User ID', 'maju' ); ?></td>
+			<td>
+			    <input id="maju_theme_options[fb_user_id]" class="regular-text" type="text" name="maju_theme_options[fb_user_id]" value="<?php esc_attr_e( $options['fb_user_id'] ); ?>" />
+			    <span class="description"><?php _e('Facebook User ID', 'maju'); ?></span>
+			</td>
+		    </tr>
+		    <tr valign="top">
+			<td scope="row" class="option_name"><?php _e( 'Default Image for Facebook Open Graph', 'maju' ); ?></td>
+			<td>
+			    <input id="maju_theme_options[fb_default_img]" class="regular-text" type="text" name="maju_theme_options[fb_default_img]" value="<?php esc_attr_e( $options['fb_default_img'] ); ?>" />
+			    <span class="description"><?php _e('Image to use if there is no post/page image available.', 'maju'); ?></span>
 			</td>
 		    </tr>
 		    <tr class="even">
@@ -126,24 +147,24 @@ function theme_options_do_page() {
 			</td>
 		    </tr>
 		    <tr valign="top">
-			<td scope="row" class="option_name"><?php _e( 'G analttics', 'maju' ); ?></td>
+			<td scope="row" class="option_name"><?php _e( 'G analytics', 'maju' ); ?></td>
 			<td>
 			    <input id="maju_theme_options[g_a]" class="regular-text" type="text" name="maju_theme_options[g_a]" value="<?php esc_attr_e( $options['g_a'] ); ?>" />
-			    <span class="description">Insert G analytics like "UA-29723403-1"</span>
+			    <span class="description"><?php _e('Insert G analytics like "UA-29723403-1"', 'maju'); ?></span>
 			</td>
 		    </tr>
 		    <tr valign="top">
 			<td scope="row" class="option_name"><?php _e( 'Custom CSS', 'maju' ); ?></td>
 			<td>
 			    <textarea id="maju_theme_options[custom_css]" class="large-text code" name="maju_theme_options[custom_css]" cols="" rows="10px"><?php echo stripslashes(htmlspecialchars($options['custom_css'] )); ?></textarea>
-			    <span class="description">Add your own styles, use only if you know what you are doing.</span>
+			    <span class="description"><?php _e('Add your own styles, use only if you know what you are doing.', 'maju'); ?></span>
 			</td>
 		    </tr>
 		    <tr valign="top">
 			<td scope="row" class="option_name"><?php _e( 'Custom Javascript', 'maju' ); ?></td>
 			<td>
 			    <textarea id="maju_theme_options[custom_javascript]" class="large-text code" name="maju_theme_options[custom_javascript]" cols="" rows="10px"><?php echo stripslashes(htmlspecialchars($options['custom_javascript'])); ?></textarea>
-			    <span class="description">Add your own scripts, use only if you know what you are doing.</span>
+			    <span class="description"><?php _e('Add your own scripts, use only if you know what you are doing.', 'maju'); ?></span>
 			</td>
 		    </tr>
 		    <tr valign="top">
@@ -186,8 +207,11 @@ function theme_options_validate( $input ) {
 	// Post Number
 	$input['post_num'] = wp_filter_nohtml_kses( $input['post_num'] );
 
-	// Twitter username
+	// Social
 	$input['tw_user'] = wp_filter_nohtml_kses( $input['tw_user'] );
+	$input['fb_id'] = wp_filter_nohtml_kses( $input['fb_id'] );
+	$input['fb_user_id'] = wp_filter_nohtml_kses( $input['fb_user_id'] );
+	$input['fb_default_img'] = wp_filter_nohtml_kses( $input['fb_default_img'] );
 
 	//Google Analytics
 	$input['g_a'] = wp_filter_nohtml_kses( $input['g_a'] );

@@ -19,7 +19,7 @@ get_header();  ?>
 		    <?php the_content(); ?>
 		</article>
 		<?php endwhile; else: ?>
-		<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
+		<p><?php _e('Sorry, no posts matched your criteria.', 'maju'); ?></p>
 		<?php endif; ?>
 
 		<div class="archives">

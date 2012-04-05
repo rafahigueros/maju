@@ -1,0 +1,215 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Text in function
+#: maju/backend/theme-options.php:49
+msgid " Theme Options"
+msgstr ""
+
+#. Text in function
+#: maju/comments.php:63
+msgid "&larr; Older Comments"
+msgstr ""
+
+#. Text in echo
+#: maju/backend/theme-options.php:90
+msgid "*leave fields blank to set default color, enter hex values or color name"
+msgstr ""
+
+#. Text in echo
+#: maju/404.php:25
+msgid "404 "
+msgstr ""
+
+#. Text in echo
+#: maju/backend/theme-options.php:78
+msgid "Apple Touch Icon URL"
+msgstr ""
+
+#. Text in echo
+#: maju/index.php:26
+#: maju/home.php:30
+#: maju/404.php:32
+#: maju/page.php:27
+msgid "Archives"
+msgstr ""
+
+#. Text in echo
+#: maju/backend/theme-options.php:144
+msgid "Archives Page"
+msgstr ""
+
+#. Text in echo
+#: maju/category.php:17
+msgid "Articles under"
+msgstr ""
+
+#. Text in echo
+#: maju/search.php:31
+msgid "Browse Archives"
+msgstr ""
+
+#. Text in echo
+#: maju/comments.php:62
+msgid "Comment navigation"
+msgstr ""
+
+#. Text in echo
+#: maju/comments.php:74
+msgid "Comments are closed."
+msgstr ""
+
+#. Text in echo
+#: maju/backend/theme-options.php:157
+msgid "Custom CSS"
+msgstr ""
+
+#. Text in echo
+#: maju/backend/theme-options.php:164
+msgid "Custom Javascript"
+msgstr ""
+
+#. Text in echo
+#: maju/backend/theme-options.php:126
+msgid "Default Image for Facebook Open Graph"
+msgstr ""
+
+#. Text in echo
+#: maju/backend/theme-options.php:112
+msgid "Facebook App ID"
+msgstr ""
+
+#. Text in echo
+#: maju/backend/theme-options.php:119
+msgid "Facebook User ID"
+msgstr ""
+
+#. Text in echo
+#: maju/backend/theme-options.php:72
+msgid "Favico URL"
+msgstr ""
+
+#. Text in echo
+#: maju/backend/theme-options.php:138
+msgid "Footer &copy;"
+msgstr ""
+
+#. Text in echo
+#: maju/backend/theme-options.php:150
+msgid "G analttics"
+msgstr ""
+
+#. Text in echo
+#: maju/backend/theme-options.php:84
+msgid "Links color"
+msgstr ""
+
+#. Text in echo
+#: maju/backend/theme-options.php:66
+msgid "Logo URL"
+msgstr ""
+
+#. Text in function
+#: maju/comments.php:64
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#. Text in echo
+#: maju/backend/theme-options.php:94
+msgid "Number of posts on Frontpage"
+msgstr ""
+
+#. Text in echo
+#: maju/backend/theme-options.php:52
+msgid "Options saved"
+msgstr ""
+
+#. Text in echo
+#: maju/backend/theme-options.php:134
+msgid "Other"
+msgstr ""
+
+#. Text in function
+#: maju/header.php:16
+msgid "Page %s"
+msgstr ""
+
+#. Text in function
+#: maju/attachment.php:20
+msgid "Return to %s"
+msgstr ""
+
+#. Text in echo
+#: maju/backend/theme-options.php:173
+msgid "Save Options"
+msgstr ""
+
+#. Text in echo
+#: maju/search.php:17
+msgid "Search Results"
+msgstr ""
+
+#. Text in echo
+#: maju/backend/theme-options.php:101
+msgid "Social"
+msgstr ""
+
+#. Text in echo
+#: maju/archives.php:27
+#: maju/page-fullwidth.php:23
+#: maju/index.php:22
+#: maju/search.php:23
+#: maju/date.php:22
+#: maju/page.php:22
+#: maju/category.php:23
+#: maju/attachment.php:34
+#: maju/single.php:24
+msgid "Sorry, no posts matched your criteria."
+msgstr ""
+
+#. Text in function
+#: maju/backend/theme-options.php:1
+msgid "Theme Options"
+msgstr ""
+
+#. Text in echo
+#: maju/comments.php:19
+msgid "This post is password protected. Enter the password to view any comments."
+msgstr ""
+
+#. Text in echo
+#: maju/404.php:26
+msgid "Try using the search form"
+msgstr ""
+
+#. Text in echo
+#: maju/backend/theme-options.php:105
+msgid "Twitter user name"
+msgstr ""
+
+#. Text in echo
+#: maju/index.php:39
+#: maju/home.php:43
+#: maju/404.php:45
+#: maju/search.php:44
+#: maju/page.php:40
+msgid "View all posts &rarr;"
+msgstr ""
+
+#. Text in echo
+#: maju/single.php:52
+msgid "by:"
+msgstr ""
+
+#. Text in echo
+#: maju/404.php:21
+msgid "read more &rarr;"
+msgstr ""
+
+#. Text in echo
+#: maju/footer.php:23
+#: maju/single.php:42
+msgid "top &uarr;"
+msgstr ""

@@ -25,21 +25,13 @@ get_header();  ?>
     </div>
 
     <!-- Scripts -->
+    <script src="<?php bloginfo('template_url'); ?>/js/prettify.js"></script>
+    <script src="<?php bloginfo('template_url'); ?>/fancybox/jquery.fancybox.pack.js"></script>
     <script>
-
 	//This enables the site to adjust on any screen, you can find this script here: http://adapt.960.gs/
-	// Edit to suit your needs.
 	var ADAPT_CONFIG = {
-	  // Where is your CSS?
 	  path: '<?php bloginfo('template_url'); ?>/css/',
-
-	  // false = Only run once, when page first loads.
-	  // true = Change on window resize and page tilt.
 	  dynamic: true,
-
-	  // First range entry is the minimum.
-	  // Last range entry is the maximum.
-	  // Separate ranges by "to" keyword.
 	  range: [
 	    '0px    to 760px  = mobile.css',
 	    '760px  to 2560px  = 720.css'
@@ -61,7 +53,7 @@ get_header();  ?>
 	    // Add search form
 	    $('<li></li>',{
 		id: 'show-search',
-		text: 'search'
+		    text: '<?php _e('search', 'maju'); ?>'
 	    }).appendTo('nav ul');
 
 	    $('#show-search').on('click', function(){
@@ -69,10 +61,33 @@ get_header();  ?>
 		$('#searchform').fadeIn();
 	    });
 
+	    //Move required span inside label on comment fomrs.
 	    var reqname = $('form#commentform p.comment-form-author span.required');
 	    var reqmail = $('form#commentform p.comment-form-email span.required');
 	    $('form#commentform p.comment-form-author label').append(reqname);
 	    $('form#commentform p.comment-form-email label').append(reqmail);
+
+	    //Mobile Navigation 
+	    var nav = $('nav ul');
+	    var navbar_btn = $('nav');
+ 
+	    if ($(nav).width() < 740) {	
+		$(nav).hide();
+		$(navbar_btn).on('click', function(){
+		    if ($(nav).is(':hidden')) {
+			$(nav).slideDown();
+		    } else {
+			$(nav).slideUp();
+		    };
+		});
+	    } 
+
+	    //Fancybox
+	    jQuery('a.zoomimg').fancybox();
+
+	    //Fancybox Galleries
+	    $('.gallery a').attr('rel', 'gallery');
+	    jQuery('.gallery a').fancybox(); 
 
 	})();
 
@@ -88,11 +103,11 @@ get_header();  ?>
 	})();
     </script>
     <script src="<?php bloginfo('template_url'); ?>/js/adapt.min.js"></script>
-    <script src="<?php bloginfo('template_url'); ?>/js/prettify.js"></script>
+
 
     <?php wp_footer(); ?>
-
     
+
     <?php
     //Custom JS here if any
     if($options['custom_javascript'] == '') { } else { ?><!-- Custom JS if any -->

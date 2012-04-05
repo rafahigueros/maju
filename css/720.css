@@ -355,3 +355,7 @@ body {
 .container_12 {
   zoom: 1;
 }
+
+
+nav ul { display: block !important; }
+

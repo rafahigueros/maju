@@ -4,16 +4,24 @@ Features
 ---------
 
 - Extremely easy to use.
-- No complex set ups or extra coding unless you want to.
+- No special set ups or  extra coding (unless you want to).
 - Theme options page(where you can set a logo, link colors, fav ico, twitter user, etc)
 - WordPress 3+ ready (menus, featured image, widget ready, etc)
 - Built using 960 Gris System and adapt.js
 - Responsive design, works on ANY screen :)
 - HTML5
 - CSS3 (a bit since its supposed to be minimal)
+- SmartMetaBox class(thanks to Nikolay Yordanov), which makes easy to add meta boxes to pages, posts or custom post types, neat feature for developers.
 - Firefox, Chrome, Safari, Opera and IE7+ supported
 - Well commented (if not feel free to post me)
-- and more..
+- New on v 1.2.1!! syntax highlighting via google code prettify.
+- New on v 1.2.1!! SEO friendly structure, includes rich snipets via schema.org
+- New on v 1.2.1!! Tables engine powered by twitter bootstrap.
+- New on v 1.3! Facebook Open Graph Integration
+- New on v 1.3! Lightbox engine for both default WP galleries and single images(Thanks to the fancybox2.0 team)
+- New on v 1.3! i18n, theme fully translatable(includes a pot file)
+- New on v 1.3! spanish translation included
+and more..
 
 Additionally , you can use it as a(very tiny) framework for your  projects..
 
@@ -48,6 +56,21 @@ Twitter user name will be used on the tweet button at the end of every post. G+,
 CHANGE LOG
 -------------------------
 
+v1.3 Mar 22 2012 rafael higueros <contact@rafaelhigueros.com>
+
+* Lightboxes engine included, it works with single images and default wp galleries(thanks to fancybox2.0)
+
+* google plus & fb like button
+
+* attachment.php added
+
+* Facebook Open Graph integration
+
+* i18n, theme fully translatable(includes a pot file)
+
+* spanish translation included
+
+
 v1.2.1 Mar 22 2012 rafael higueros <contact@rafaelhigueros.com>
 
 * Support rich snipets via schema.org for authors
@@ -55,6 +78,7 @@ v1.2.1 Mar 22 2012 rafael higueros <contact@rafaelhigueros.com>
 * More SEO friendly structure
 
 * New pre/code styles thanks to twitter bootstrap and syntax highlighting via google-code-prettify
+
 
 v1.2 Mar 18 2012 rafael higueros <contact@rafaelhigueros.com>
 

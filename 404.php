@@ -10,11 +10,6 @@ $options = get_option('maju_theme_options');
 
 get_header(); ?>
 
-<script>
-(function(){
-})();
-</script>
-
 	<div id="body">
 
 	    <section id="articles" class="grid_9">
@@ -23,7 +18,7 @@ get_header(); ?>
 		<article> 
 		    <h2 class="title"><a href="<? the_permalink();?>" title="<?php the_title();  ?>"><?php the_title(); ?></a></h2>
 		    <?php the_excerpt(); ?>
-		    <a href="<?php the_permalink(); ?>" title="<?php the_title();  ?>" class="read-more">read more &rarr;</a>
+		    <a href="<?php the_permalink(); ?>" title="<?php the_title();  ?>" class="read-more"><?php _e('read more &rarr;', 'maju'); ?></a>
 		</article>
 		<?php endwhile; else: ?>
 		<article class="notfound">

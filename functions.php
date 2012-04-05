@@ -73,7 +73,7 @@
             $excerpt = preg_replace('`\[[^\]]*\]`','',$excerpt);
         return $excerpt;
     }
-
+ 
 
     //Ad backend options to Dashboard
     require_once ( get_template_directory() . '/backend/theme-options.php' );
@@ -100,5 +100,33 @@
 	)
     ));
     */
+
+    //deactivate WordPress Default Gallery styling
+    add_filter( 'use_default_gallery_style', '__return_false' );
+
+
+    //Facebook Open Graph og:image function
+    function catch_that_image() {
+	global $post, $posts;
+	$first_img = '';
+	ob_start();
+	ob_end_clean();
+	$output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
+	$first_img = $matches [1] [0];
+	if(empty($first_img)){
+	    //Defines a default image
+	    $first_img = "";	   
+	 }
+	return $first_img;
+    }
+
+
+    //i18n
+    load_theme_textdomain( 'maju', get_template_directory() . '/languages' );
+
+    $locale = get_locale();
+    $locale_file = get_template_directory() . "/languages/$locale.php";
+    if ( is_readable( $locale_file ) )
+	    require_once( $locale_file );
 
 ?>

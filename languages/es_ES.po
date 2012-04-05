@@ -1,0 +1,370 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: maju v1.2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2012-04-05 15:34+0000\n"
+"Last-Translator: admin <rafael.higueros@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-Language: Spanish\n"
+"X-Poedit-Country: SPAIN\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#: 404.php:21
+#@ maju
+msgid "read more &rarr;"
+msgstr "leer m&aacute;s &rarr;"
+
+#: 404.php:25
+#@ maju
+msgid "404 "
+msgstr "404"
+
+#: 404.php:26
+#@ maju
+msgid "Try using the search form"
+msgstr "Intenta usar el formulario de búsqueda"
+
+#: 404.php:32
+#: home.php:30
+#: index.php:26
+#: page.php:27
+#@ maju
+msgid "Archives"
+msgstr "Archivo"
+
+#: 404.php:45
+#: home.php:43
+#: index.php:39
+#: page.php:40
+#: search.php:44
+#@ maju
+msgid "View all posts &rarr;"
+msgstr "Ver todos los art&iacute;culos &rarr;"
+
+#: archives.php:27
+#: attachment.php:34
+#: category.php:23
+#: date.php:22
+#: index.php:22
+#: page-fullwidth.php:23
+#: page.php:22
+#: search.php:23
+#: single.php:24
+#@ maju
+msgid "Sorry, no posts matched your criteria."
+msgstr "Lo sentimos, no se encontraron resultados."
+
+#: attachment.php:20
+#, php-format
+#@ maju
+msgid "Return to %s"
+msgstr "Regresar a %s"
+
+#: backend/theme-options.php:23
+#@ maju
+msgid "Theme Options"
+msgstr "Opciones del tema"
+
+#: backend/theme-options.php:49
+#@ maju
+msgid " Theme Options"
+msgstr " Opciones del tema"
+
+#: backend/theme-options.php:52
+#@ maju
+msgid "Options saved"
+msgstr "Opciones guardadas"
+
+#: backend/theme-options.php:66
+#@ maju
+msgid "Logo URL"
+msgstr "URL del logo"
+
+#: backend/theme-options.php:68
+#@ default
+msgid "logo_url"
+msgstr ""
+
+#: backend/theme-options.php:72
+#@ maju
+msgid "Favico URL"
+msgstr "URL del favico"
+
+#: backend/theme-options.php:74
+#@ default
+msgid "favico_url"
+msgstr ""
+
+#: backend/theme-options.php:78
+#@ maju
+msgid "Apple Touch Icon URL"
+msgstr "Apple Touch Icon URL"
+
+#: backend/theme-options.php:80
+#@ default
+msgid "appleicon_url"
+msgstr ""
+
+#: backend/theme-options.php:84
+#@ maju
+msgid "Links color"
+msgstr "Color de los links"
+
+#: backend/theme-options.php:87
+#@ default
+msgid "links_color"
+msgstr ""
+
+#: backend/theme-options.php:89
+#@ default
+msgid "links_hover"
+msgstr ""
+
+#: backend/theme-options.php:95
+#@ maju
+msgid "Number of posts on Frontpage"
+msgstr "Numero de art&iacute;clos en la p&aacute;gina de inicio."
+
+#: backend/theme-options.php:97
+#@ default
+msgid "post_num"
+msgstr ""
+
+#: backend/theme-options.php:102
+#@ maju
+msgid "Social"
+msgstr "Social"
+
+#: backend/theme-options.php:106
+#@ maju
+msgid "Twitter user name"
+msgstr "Usuario de Twitter"
+
+#: backend/theme-options.php:108
+#@ default
+msgid "tw_user"
+msgstr ""
+
+#: backend/theme-options.php:113
+#@ maju
+msgid "Facebook App ID"
+msgstr "ID de la aplicaci&oacute;n de Facebook"
+
+#: backend/theme-options.php:115
+#@ default
+msgid "fb_id"
+msgstr ""
+
+#: backend/theme-options.php:120
+#@ maju
+msgid "Facebook User ID"
+msgstr "ID del usuario en Facebook"
+
+#: backend/theme-options.php:122
+#@ default
+msgid "fb_user_id"
+msgstr ""
+
+#: backend/theme-options.php:127
+#@ maju
+msgid "Default Image for Facebook Open Graph"
+msgstr "Imagen por defecto para Open Graph de Facebook"
+
+#: backend/theme-options.php:129
+#@ default
+msgid "fb_default_img"
+msgstr ""
+
+#: backend/theme-options.php:135
+#@ maju
+msgid "Other"
+msgstr "Otros"
+
+#: backend/theme-options.php:139
+#@ maju
+msgid "Footer &copy;"
+msgstr "Footer &copy;"
+
+#: backend/theme-options.php:141
+#@ default
+msgid "footer_copy"
+msgstr ""
+
+#: backend/theme-options.php:145
+#@ maju
+msgid "Archives Page"
+msgstr "P&aacute;gina de archivo"
+
+#: backend/theme-options.php:147
+#@ default
+msgid "archives_page"
+msgstr ""
+
+#: backend/theme-options.php:153
+#@ default
+msgid "g_a"
+msgstr ""
+
+#: backend/theme-options.php:158
+#@ maju
+msgid "Custom CSS"
+msgstr "CSS Personalizado"
+
+#: backend/theme-options.php:165
+#@ maju
+msgid "Custom Javascript"
+msgstr "JavaScript Personalizado"
+
+#: backend/theme-options.php:174
+#@ maju
+msgid "Save Options"
+msgstr "Salvar Opciones"
+
+#: category.php:17
+#@ maju
+msgid "Articles under"
+msgstr "Art&iacute;culos en"
+
+#: comments.php:19
+#@ maju
+msgid "This post is password protected. Enter the password to view any comments."
+msgstr "Este art&iacute;culo/p&aacute;gina esta protegido con contraseña. Ingresa la contraseña para ver el contenido."
+
+#: comments.php:35
+#, php-format
+#@ maju
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "Un comentario en &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s Comentarios en &ldquo;%2$s&rdquo;"
+
+#: comments.php:42
+#: comments.php:62
+#@ maju
+msgid "Comment navigation"
+msgstr "Navegaci&oacuteln en los comentarios."
+
+#: comments.php:43
+#: comments.php:63
+#@ maju
+msgid "&larr; Older Comments"
+msgstr "&larr; Comentarios antiguos"
+
+#: comments.php:44
+#: comments.php:64
+#@ maju
+msgid "Newer Comments &rarr;"
+msgstr "Comentarios nuevos &rarr;"
+
+#: comments.php:74
+#@ maju
+msgid "Comments are closed."
+msgstr "Comentarios cerrados"
+
+#: footer.php:23
+#: single.php:42
+#@ maju
+msgid "top &uarr;"
+msgstr "arriba &uarr;"
+
+#: functions.php:54
+#@ default
+msgid "Header Navigation"
+msgstr ""
+
+#: header.php:34
+#, php-format
+#@ maju
+msgid "Page %s"
+msgstr "P&aacute;gina %s"
+
+#: search.php:17
+#@ maju
+msgid "Search Results"
+msgstr "Resultados de busqueda"
+
+#: search.php:31
+#@ maju
+msgid "Browse Archives"
+msgstr "Buscar el el archivo"
+
+#: single.php:52
+#@ maju
+msgid "by:"
+msgstr "por:"
+
+#: footer.php:56
+#@ maju
+msgid "search"
+msgstr "buscar"
+
+#: backend/theme-options.php:151
+#@ maju
+msgid "G analytics"
+msgstr "Google Analytics"
+
+#: backend/theme-options.php:154
+#@ maju
+msgid "Insert G analytics like \"UA-29723403-1\""
+msgstr "Insertar unicamente el c&oacute;digo \\\"UA-29723403-1\\\""
+
+#: backend/theme-options.php:161
+#@ maju
+msgid "Add your own styles, use only if you know what you are doing."
+msgstr "Añada sus propios estilos(Use solo si sabe lo que hace)."
+
+#: backend/theme-options.php:168
+#@ maju
+msgid "Add your own scripts, use only if you know what you are doing."
+msgstr "Añada su propio JavaScript(Use solo si sabe lo que hace)."
+
+#: backend/theme-options.php:62
+#@ maju
+msgid "General View Options"
+msgstr "Opciones Generales"
+
+#: backend/theme-options.php:86
+#@ maju
+msgid "Links:"
+msgstr "Enlaces:"
+
+#: backend/theme-options.php:88
+#@ maju
+msgid "Hover:"
+msgstr "Mouse Hover:"
+
+#: backend/theme-options.php:109
+#@ maju
+msgid "Will be used for Tweet button"
+msgstr "Sera usado en el boton para Tweetear."
+
+#: backend/theme-options.php:116
+#@ maju
+msgid "Aplication Id(you ne dd to create an fb app first)"
+msgstr "ID de la aplicaci&oacute;n(debes crear una aplicaci&oacute;n antes)."
+
+#: backend/theme-options.php:123
+#@ maju
+msgid "Fasebook User ID"
+msgstr "Usuario en Facebook"
+
+#: backend/theme-options.php:130
+#@ maju
+msgid "Image to use if there is no other available image"
+msgstr "Imagen a usar si no existe imagen disponible."
+
+#: backend/theme-options.php:91
+#@ maju
+msgid "Leave fields blank to set default color, enter hex values or color name"
+msgstr "Dejar en blanco para color por defecto, ingresar valores hexadecimales o nombre del color."
+
