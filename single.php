@@ -16,8 +16,7 @@ get_header();  ?>
 
 		<article itemscope itemtype="http://schema.org/Article"> 
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-		    <h1 class="title" itemprop="name"><?php the_title(); ?></h1>
-		    <?php echo get_the_post_thumbnail($page->ID, 'thumbnail'); ?>
+		    <div class="post-title"><?php echo get_the_post_thumbnail($page->ID, 'thumbnail'); ?><h1 itemprop="name"><?php the_title(); ?></h1></div>
 		    <?php the_content(); ?>
 		    <p itemprop="about"><?php the_tags(); ?></p>
 		<?php endwhile; else: ?>

@@ -112,7 +112,7 @@ get_header();  ?>
     //Custom JS here if any
     if($options['custom_javascript'] == '') { } else { ?><!-- Custom JS if any -->
     <script>
-    <?php echo stripslashes($options['custom_javascript']); ?>  
+    <?php echo stripslashes(htmlspecialchars_decode($options['custom_javascript'])); ?>  
     </script><?php } ?>
 
 	

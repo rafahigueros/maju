@@ -163,7 +163,7 @@ function theme_options_do_page() {
 		    <tr valign="top">
 			<td scope="row" class="option_name"><?php _e( 'Custom Javascript', 'maju' ); ?></td>
 			<td>
-			    <textarea id="maju_theme_options[custom_javascript]" class="large-text code" name="maju_theme_options[custom_javascript]" cols="" rows="10px"><?php echo stripslashes(htmlspecialchars($options['custom_javascript'])); ?></textarea>
+			    <textarea id="maju_theme_options[custom_javascript]" class="large-text code" name="maju_theme_options[custom_javascript]" cols="" rows="10px"><?php echo stripslashes($options['custom_javascript']); ?></textarea>
 			    <span class="description"><?php _e('Add your own scripts, use only if you know what you are doing.', 'maju'); ?></span>
 			</td>
 		    </tr>

@@ -250,8 +250,10 @@ article { padding: 0 0 30px 0 }
     article img {
         height: auto;
         max-width: 520px;
-        width: 100%;
     }
+    article .post-title { overflow: hidden; }
+	article .post-title h1 { margin: 0; }
+
     article img.alignright, .wp-caption.alignright {
         float: right;
         margin: 10px 0 10px 20px;
@@ -263,22 +265,19 @@ article { padding: 0 0 30px 0 }
     article img.wp-post-image {
         float: left;
         margin: 10px 20px 10px 0;
-	max-width: 380px;
-        width: auto;
-    }
-    article .size-medium {
-        max-width: 450px;
-        width: auto !important;
-    }
-    article .size-small {
-        max-width: 250px;
+	/*max-width: 380px;*/
         width: auto !important;
     }
     article .wp-caption {
-        background: #eee;
+        background: #f9f9f9;
+	display: inline-block;
+	margin: 5px 0;
         max-width: 520px !important;
-        padding-top: 5px;
+        padding-top: 10px;
         text-align: center;
+	-webkit-border-radious: 4px;
+	   -moz-border-radius: 4px;
+	        border-radius: 4px;
     }
         article .wp-caption img { max-width: 500px !important }
         article .wp-caption img.size-medium { max-width: 450px !important }
@@ -314,7 +313,6 @@ article { padding: 0 0 30px 0 }
 	.gallery-columns-9 dl { width: 10.111% }
 
 
-article.notfound img { margin: 0 30px 30px 0 }
 article.notfound h1 { font-size: 40px }
     article.notfound h1 span {
         font-family: 'Asap','Lucida Grande', sans-serif;
