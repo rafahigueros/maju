@@ -62,8 +62,10 @@ if($options['fb_id'] == '' || $options['fb_user_id'] == '') { } else { ?>
     <meta property="og:type" content="article" />
     <?php if(has_post_thumbnail() ) { ?>
     <meta property="og:image" content="<?php if (function_exists('wp_get_attachment_thumb_url')) {echo wp_get_attachment_thumb_url(get_post_thumbnail_id($post->ID)); }?>" />
-    <?php } else { ?>
+    <?php } else if(catch_that_image() !== '') { ?>
     <meta property="og:image" content="<?php if (function_exists('catch_that_image')) {echo catch_that_image(); }?>" />
+    <?php } else { ?>
+    <?php if($options['fb_default_img'] == '') {} else { ?><meta property="og:image" content="<?php echo $options['fb_default_img']; ?>" /> <?php } ?>
     <?php } ?>
 
     <!-- if page is others -->
@@ -84,7 +86,7 @@ if($options['fb_id'] == '' || $options['fb_user_id'] == '') { } else { ?>
     <noscript>
 	<link rel="stylesheet" href="<?php bloginfo('template_url');?>/css/mobile.css" />
     </noscript>
-    <link href='http://fonts.googleapis.com/css?family=Asap' rel='stylesheet' type='text/css'><!-- Google Font Used on titles -->
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
 	    
     <?php
     //If set on theme options panel change links color

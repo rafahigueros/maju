@@ -3,9 +3,8 @@ img, h1, h2, h3, h4, h5, h6, p,
 ol, ul, li, form, label {
 	background: transparent;
 	border: 0;
-	font-family: 'Times New Roman', serif;
+	font-family: 'Georgia', 'Times New Roman', serif;
 	font-weight: inherit;
-	font-size: inherit;
 	outline: 0;
 }
 
@@ -199,7 +198,7 @@ select:focus {
 
 /* LE HEADINGS _____________________________________ */
 h1, h2, h3, h4, h5, h6,
-h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{ font-family: 'Asap','Lucida Grande', sans-serif; line-height: 40px; }
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{ font-family: 'Droid Sans','Lucida Grande', sans-serif; }
 h1 { font-size: 36px; }
 h2 { font-size: 28px; }
 h3 { font-size: 24px; }
@@ -223,7 +222,7 @@ ___________________________________________________________*/
         font-size: 14px;
         width: 100%;
     }
-    #site-title a { font-family: 'Asap','Lucida Grande', sans-serif }
+    #site-title a { font-family: 'Droid Sans','Lucida Grande', sans-serif }
     
 #logo img { width: 60% }
 
@@ -315,7 +314,7 @@ article { padding: 0 0 30px 0 }
 
 article.notfound h1 { font-size: 40px }
     article.notfound h1 span {
-        font-family: 'Asap','Lucida Grande', sans-serif;
+        font-family: 'Droid Sans','Lucida Grande', sans-serif;
         font-size: 20px;
     }
     
@@ -341,7 +340,7 @@ article.notfound h1 { font-size: 40px }
         line-height: 14px;
         list-style-type: none;
     }
-        .post-categories li a { font-family: 'Asap','Lucida Grande', sans-serif }
+        .post-categories li a { font-family: 'Droid Sans','Lucida Grande', sans-serif }
         
 .archives.home { margin: 30px 0 0 0 }
 
@@ -356,6 +355,7 @@ article.notfound h1 { font-size: 40px }
         .archives ul li em {
 	    float: left;
             font-size: 12px;
+	    font-style: normal;
             padding: 0 30px 0 0;
 	    margin-bottom: 5px;
             text-transform: uppercase;
@@ -404,7 +404,7 @@ ___________________________________________________________*/
 }
 
 #comments-title span {
-    font-family: 'Asap','Lucida Grande', sans-serif
+    font-family: 'Droid Sans','Lucida Grande', sans-serif
 }
 
 #respond label {
