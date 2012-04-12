@@ -54,12 +54,13 @@ get_header();  ?>
 	    $('<li></li>',{
 		id: 'show-search',
 		    text: '<?php _e('search', 'maju'); ?>'
-	    }).appendTo('nav ul');
+	    }).appendTo('nav ul:first-child');
 
 	    $('#show-search').on('click', function(){
 		$(this).hide();
 		$('#searchform').fadeIn();
 	    });
+
 
 	    //Move required span inside label on comment fomrs.
 	    var reqname = $('form#commentform p.comment-form-author span.required');
@@ -81,6 +82,16 @@ get_header();  ?>
 		    };
 		});
 	    } 
+
+	    //Archives list
+	    var emptyem = $('.archives ul li a em');
+
+	    $(emptyem).each(function(){
+		if($(this).text() == ''){
+		    $(this).html('&raquo;');
+		    $(this).css('text-align', 'center')
+		}
+	    });
 
 	    //Fancybox
 	    jQuery('a.zoomimg').fancybox();

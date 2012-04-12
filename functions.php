@@ -10,18 +10,6 @@
     add_theme_support('post-thumbnails');
 
 
-    //Navigation Menu
-    if ( function_exists('register_sidebar') )
-    register_sidebar(array(
-	    'name' => 'Default Navigation',
-	    'description' => 'Place your costum menu here.',
-	    'before_widget' => '',
-	    'after_widget' => '',
-	    'before_title' => '',
-	    'after_title' => '',
-    ));
-
-
     //Default Sidebar
     if ( function_exists('register_sidebar') )
     register_sidebar(array(

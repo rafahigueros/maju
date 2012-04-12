@@ -14,7 +14,7 @@ get_header();  ?>
 
 	    <section id="articles" class="grid_9">
 		<article> 
-		    <h3 class="tags-name"><?php _e( 'Articles under', 'maju' ); ?>: <?php single_cat_title(); ?></h3>
+		    <h3 class="tags-name"><?php _e( 'Articles tagged under', 'maju' ); ?>: <?php single_tag_title(); ?></h3>
 		    <div class="archives">
 			<ul>
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>

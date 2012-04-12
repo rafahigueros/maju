@@ -15,12 +15,13 @@ get_header();  ?>
 	    <section id="articles" class="grid_9">
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		<article> 
-		    <h1 class="title"><a href="<? the_permalink();?>" title="<?php the_title();  ?>"><?php the_title(); ?></a></h1>
-		    <?php the_content(); ?>
+		    <h1 class="post-title"><a href="<? the_permalink();?>" title="<?php the_title();  ?>"><?php the_title(); ?></a></h1>
+		    <?php the_content( __('Continue Reading..', 'maju') ); ?>
 		</article>
 		<?php endwhile; else: ?>
 		<p><?php _e('Sorry, no posts matched your criteria.', 'maju'); ?></p>
 		<?php endif; ?>
+		<?php next_posts_link('&larr; Older Entries') ?> <?php previous_posts_link('Newer Entries &rarr;') ?>
 
 		<div class="archives">
 		    <h4><?php _e('Archives', 'maju') ?></h4>

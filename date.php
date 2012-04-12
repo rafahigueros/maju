@@ -23,6 +23,7 @@ get_header(); ?>
 		    <?php endif; ?>
 		    </ul>
 		</div>
+		<?php next_posts_link('&larr; Older Entries') ?>  <?php previous_posts_link('Newer Entries &rarr;') ?>
 	    </section>
 
 	    <!-- Sidebar -->

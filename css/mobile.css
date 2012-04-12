@@ -69,21 +69,12 @@ nav .icon-bar + .icon-bar {
   margin-top: 3px;
 }
 
-    /*
-    header nav ul li {
-	float: left;
-	margin: 0 10px;
-	padding: 10px 0;
-    }
-    */
-
 #searchform {
     position: relative !important;
     top: 10px !important;
     right: auto !important;
 }
 
-article img.size-full { width: 100%; }
 article .wp-caption { width: auto !important;  }
 
 .archives ul li em { display: block !important; }

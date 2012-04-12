@@ -59,7 +59,7 @@ This theme provide an tables.css wich allows a very powerful table handling,  it
 
 A basic usage is:
 
-`<table class="table table-bordered"></table>`
+`<table class="table-bordered"></table>`
 
 And you can use or combine the following classes too:
 
@@ -72,6 +72,15 @@ If you are looking for support feel fre to leave a comment on [this page](http:/
 
 CHANGE LOG
 -------------------------
+
+v1.3.1 Apr 11 2012 rafael higueros <contact@rafaelhigueros.com>
+
+* Several typography enhancements
+
+* add post nab links on category, tag, and date pages
+
+* successfully approved theme test unit 
+
 
 v1.3 Mar 22 2012 rafael higueros <contact@rafaelhigueros.com>
 

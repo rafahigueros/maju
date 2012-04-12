@@ -160,8 +160,7 @@ if($options['fb_id'] == '' || $options['fb_user_id'] == '') { } else { ?>
 		<span class="icon-bar"></span>
 		<span class="icon-bar"></span>
 		<span class="icon-bar"></span>
-		<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Default Navigation") ) : ?>
-		<?php endif; ?>
+		<?php wp_nav_menu( array('menu' => 'Header' )); ?>
 	    </nav>
 	</header><!-- #END Header -->
 

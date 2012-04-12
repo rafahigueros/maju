@@ -16,9 +16,20 @@ get_header();  ?>
 
 		<article itemscope itemtype="http://schema.org/Article"> 
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-		    <div class="post-title"><?php echo get_the_post_thumbnail($page->ID, 'thumbnail'); ?><h1 itemprop="name"><?php the_title(); ?></h1></div>
+		    <div class="post-title-box"><?php echo get_the_post_thumbnail($page->ID, 'thumbnail'); ?><h1 itemprop="name"><?php the_title(); ?></h1></div>
 		    <?php the_content(); ?>
-		    <p itemprop="about"><?php the_tags(); ?></p>
+		    <?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'twentyeleven' ) . '</span>', 'after' => '</div>' ) ); ?>
+		    <p itemprop="about">
+		    on: <?php the_category(', '); ?><br /> 
+		    <?php
+			/* translators: used between list items, there is a space after the comma */
+			$tags_list = get_the_tag_list( '', __( ', ', 'maju' ) );
+			if ( $tags_list ): ?>
+			<span class="tag-links">
+			    <?php printf( __( '<span class="%1$s">tagged:</span> %2$s', 'maju' ), 'entry-utility-prep entry-utility-prep-tag-links', $tags_list );?>
+			</span>
+			<?php endif; // End if $tags_list ?>
+		    </p>
 		<?php endwhile; else: ?>
 		    <p><?php _e('Sorry, no posts matched your criteria.', 'maju'); ?></p>
 		<?php endif; ?>
@@ -37,8 +48,12 @@ get_header();  ?>
 		      })();
 		    </script>
 		    <g:plusone></g:plusone>
+		    <?php
+		    //If set on theme options panel integrate Facebook Open Graph
+		    if($options['fb_id'] == '' || $options['fb_user_id'] == '') { } else { ?>
 		    <iframe src="//www.facebook.com/plugins/like.php?href=<?php the_permalink(); ?>&amp;send=false&amp;layout=button_count&amp;width=100&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21&amp;appId=127607203928365" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowTransparency="true"></iframe>
 		    <a style="float: right;" href="#" class="back-top"><?php _e('top &uarr;', 'maju') ?></a>
+		    <?php } ?>
 		</p>
 
 		<div id="singlepost-widget-area"><!-- I use this for ad space usually -->
