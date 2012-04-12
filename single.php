@@ -37,7 +37,7 @@ get_header();  ?>
 
 		<p>
 		    <?php if($options['tw_user'] == '') { } else { ?>
-		    <a  href="https://twitter.com/share" class="twitter-share-button" data-size="large"  data-text="<?php the_title(); ?>" data-url="<?php echo wp_get_shortlink(); ?>" data-via="<?php echo $options['tw_user']; ?>" data-lang="en">Tweet</a>
+		    <a  href="https://twitter.com/share" class="twitter-share-button" data-size="medium"  data-text="<?php the_title(); ?>" data-url="<?php echo wp_get_shortlink(); ?>" data-via="<?php echo $options['tw_user']; ?>" data-lang="en">Tweet</a>
 		    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 		    <?php } ?>
 		    <script>
@@ -47,13 +47,13 @@ get_header();  ?>
 			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
 		      })();
 		    </script>
-		    <g:plusone></g:plusone>
+		    <g:plusone width="120"></g:plusone>
 		    <?php
 		    //If set on theme options panel integrate Facebook Open Graph
 		    if($options['fb_id'] == '' || $options['fb_user_id'] == '') { } else { ?>
-		    <iframe src="//www.facebook.com/plugins/like.php?href=<?php the_permalink(); ?>&amp;send=false&amp;layout=button_count&amp;width=100&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21&amp;appId=127607203928365" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowTransparency="true"></iframe>
-		    <a style="float: right;" href="#" class="back-top"><?php _e('top &uarr;', 'maju') ?></a>
+		    <iframe src="//www.facebook.com/plugins/like.php?href=<?php the_permalink(); ?>&amp;send=false&amp;layout=button_count&amp;width=85&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21&amp;appId=127607203928365" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:85px; height:25px;" allowTransparency="true"></iframe>
 		    <?php } ?>
+		    <a style="float: right;" href="#" class="back-top"><?php _e('top &uarr;', 'maju') ?></a>
 		</p>
 
 		<div id="singlepost-widget-area"><!-- I use this for ad space usually -->

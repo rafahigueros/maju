@@ -75,8 +75,14 @@ nav .icon-bar + .icon-bar {
     right: auto !important;
 }
 
-article .wp-caption { width: auto !important;  }
+article img { max-width: 100% !important; }
 
+article .wp-caption { 
+    max-width: 220px;
+    width: auto !important;  
+}
+    article .wp-caption img { max-width: 100% !important;  }
+    
 .archives ul li em { display: block !important; }
 
 #sidebar { margin-top: 40px;  }

@@ -173,13 +173,13 @@ input[type="file"]:focus, input[type="radio"]:focus, input[type="checkbox"]:focu
 
 /* LE HEADINGS _____________________________________ */
 h1, h2, h3, h4, h5, h6,
-h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{ font-family: 'Droid Sans','Lucida Grande', sans-serif; }
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { color: #707070; font-family: 'Droid Sans','Lucida Grande', sans-serif; }
 h1 { font-size: 36px; }
-h2 { font-size: 28px; }
+h2 { font-size: 28px; color: #000; }
 h3 { font-size: 22px; }
-h4 { font-size: 18px; text-transform: uppercase; }
-h5 { font-size: 16px; text-transform: uppercase; letter-spacing: 3px; }
-h6 { font-size: 14px; color: #000; }
+h4 { font-size: 18px; text-transform: uppercase; letter-spacing: 3px; }
+h5 { font-size: 16px; }
+h6 { font-size: 14px; text-transform: uppercase;}
 
 /* LE LINKS _____________________________________ */
 a	    { text-decoration: none; }
@@ -227,50 +227,14 @@ article {
     padding: 0 0 10px 0;
 }
 
+    article .post-title { margin: 0 }
+    article .post-title-box { overflow: hidden }
+        article .post-title-box h1 { color: #000; margin: 0 }
+
     article img.wp-post-image {
         float: left;
         margin: 10px 20px 10px 0;
         width: auto !important;
-    }
-
-    article .wp-caption-text { margin: -5px 0 0 0 }
-    article .post-title-box { overflow: hidden }
-        article .post-title-box h1 { margin: 0 }
-
-    article .aligncenter {
-        clear: both;
-        display: block;
-        margin: 20px auto;
-    }
-
-    article .wp-caption {
-        background: #f9f9f9;
-        max-width: 520px !important;
-        padding-top: 10px;
-        text-align: center;
-        -webkit-border-radious: 4px;
-           -moz-border-radius: 4px;
-                border-radius: 4px;
-    }
-
-        article .wp-caption img.size-medium { max-width: 450px !important }
-        article .wp-caption img.size-small { max-width: 250px !important }
-        article .wp-caption img { max-width: 500px !important }
-
-    article .post-title { margin: 0 }
-    article .alignright {
-        float: right;
-        margin: 10px 0 10px 20px;
-    }
-
-    article .page-link {
-        display: inline-block;
-        width: 100%;
-    }
-
-    article .alignleft {
-        float: left;
-        margin: 10px 20px 10px 0;
     }
 
     article img {
@@ -279,6 +243,42 @@ article {
     }
 
     article p { display: block }
+
+    article .aligncenter {
+        clear: both;
+        display: block;
+        margin: 20px auto;
+    }
+
+    article .alignright {
+        float: right;
+        margin: 10px 0 10px 20px;
+    }
+
+    article .alignleft {
+        float: left;
+        margin: 10px 20px 10px 0;
+    }
+
+    article .wp-caption {
+        background: #f9f9f9;
+        max-width: 500px !important;
+        padding-top: 10px;
+        text-align: center;
+        -webkit-border-radious: 4px;
+           -moz-border-radius: 4px;
+                border-radius: 4px;
+    }
+	article .wp-caption-text { margin: -5px 0 0 0 }
+
+        /*article .wp-caption img.size-medium { max-width: 450px !important }
+        article .wp-caption img.size-small { max-width: 250px !important }*/
+        article .wp-caption img { max-width: 480px !important }
+ 
+    article .page-link {
+        display: inline-block;
+        width: 100%;
+    }
     
 /* LE WP GALLERY STYLE */
 .gallery {
@@ -406,10 +406,10 @@ ___________________________________________________________*/
     float: left;
     margin: 0 30px 0 0;
     text-align: right;
-    width: 60px;
+    width: 142px;
 }
 
-#respond textarea { width: 80% }
+#respond textarea { width: 65% }
 
 .commentlist {
     margin: 0;
@@ -420,11 +420,13 @@ ___________________________________________________________*/
 .comment, .trackback, .pingback, .post-meta {
     background: #f9f9f9;
     border: 1px solid #f0f0f0;
+    display: inline-block;
     margin: 10px 0;
-    padding: 10px 20px;
+    padding: 10px 3%;
+    width: 94%;
     -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
+       -moz-border-radius: 4px;
+            border-radius: 4px;
 }
 
 .comment.byuser { background: #f2fcff !important }
@@ -432,4 +434,150 @@ ___________________________________________________________*/
 .vcard img {
     float: left;
     margin: 0 20px 20px 0;
+}
+
+
+/*
+ * Derived from einaros's Sons of Obsidian theme at
+ * http://studiostyl.es/schemes/son-of-obsidian by
+ * Alex Ford of CodeTunnel:
+ * http://CodeTunnel.com/blog/post/71/google-code-prettify-obsidian-theme
+ */
+.str { color: #EC7600 }
+.kwd { color: #93C763 }
+.com { color: #66747B }
+.typ { color: #678CB1 }
+.lit { color: #FACD22 }
+.pun { color: #F1F2F3 }
+.pln { color: #F1F2F3 }
+.tag { color: #8AC763 }
+.atn { color: #E0E2E4 }
+.atv { color: #EC7600 }
+.dec { color: pink }
+pre.prettyprint { border: 0px solid #888 }
+ol.linenums {
+    margin-top: 0;
+    padding-left: 30px;
+    margin-bottom: 0;
+}
+.prettyprint { background: #303030; }
+li.L0, li.L1, li.L2, li.L3, li.L4, li.L5, li.L6, li.L7, li.L8, li.L9 {
+    color: #999;
+    font-family: menlo, monaco, "courier new", monospace !important;
+}
+li.L1, li.L3, li.L5, li.L7, li.L9 { background: #333 }
+@media print { 
+    .str { color: #060 }
+    .kwd {
+        color: #006;
+        font-weight: bold;
+    }
+    .com {
+        color: #600;
+        font-style: italic;
+    }
+    .typ {
+        color: #404;
+        font-weight: bold;
+    }
+    .lit { color: #044 }
+    .pun { color: #440 }
+    .pln { color: #000 }
+    .tag {
+        color: #006;
+        font-weight: bold;
+    }
+    .atn { color: #404 }
+    .atv { color: #060 }
+}
+
+
+/* LE TABLES
+___________________________________________________________*/
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  background-color: transparent;
+}
+table {
+  width: 100%;
+  margin-bottom: 18px;
+}
+table th,
+table td {
+  padding: 8px;
+  line-height: 18px;
+  text-align: left;
+  vertical-align: top;
+  border-top: 1px solid #dddddd;
+}
+table th {
+  font-weight: bold;
+}
+table thead th {
+  vertical-align: bottom;
+}
+table colgroup + thead tr:first-child th,
+table colgroup + thead tr:first-child td,
+table thead:first-child tr:first-child th,
+table thead:first-child tr:first-child td {
+  border-top: 0;
+}
+table tbody + tbody {
+  border-top: 2px solid #dddddd;
+}
+.table-condensed th,
+.table-condensed td {
+  padding: 4px 5px;
+}
+.table-bordered {
+  border: 1px solid #dddddd;
+  border-left: 0;
+  border-collapse: separate;
+  *border-collapse: collapsed;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.table-bordered th,
+.table-bordered td {
+  border-left: 1px solid #dddddd;
+}
+.table-bordered thead:first-child tr:first-child th,
+.table-bordered tbody:first-child tr:first-child th,
+.table-bordered tbody:first-child tr:first-child td {
+  border-top: 0;
+}
+.table-bordered thead:first-child tr:first-child th:first-child,
+.table-bordered tbody:first-child tr:first-child td:first-child {
+  -webkit-border-radius: 4px 0 0 0;
+  -moz-border-radius: 4px 0 0 0;
+  border-radius: 4px 0 0 0;
+}
+.table-bordered thead:first-child tr:first-child th:last-child,
+.table-bordered tbody:first-child tr:first-child td:last-child {
+  -webkit-border-radius: 0 4px 0 0;
+  -moz-border-radius: 0 4px 0 0;
+  border-radius: 0 4px 0 0;
+}
+.table-bordered thead:last-child tr:last-child th:first-child,
+.table-bordered tbody:last-child tr:last-child td:first-child {
+  -webkit-border-radius: 0 0 0 4px;
+  -moz-border-radius: 0 0 0 4px;
+  border-radius: 0 0 0 4px;
+}
+.table-bordered thead:last-child tr:last-child th:last-child,
+.table-bordered tbody:last-child tr:last-child td:last-child {
+  -webkit-border-radius: 0 0 4px 0;
+  -moz-border-radius: 0 0 4px 0;
+  border-radius: 0 0 4px 0;
+}
+.table-striped tbody tr:nth-child(odd) td,
+.table-striped tbody tr:nth-child(odd) th {
+  background-color: #f9f9f9;
+}
+.table tbody tr:hover td,
+.table tbody tr:hover th {
+  background-color: #f5f5f5;
 }

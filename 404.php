@@ -16,9 +16,8 @@ get_header(); ?>
 		
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		<article> 
-		    <h2 class="title"><a href="<? the_permalink();?>" title="<?php the_title();  ?>"><?php the_title(); ?></a></h2>
-		    <?php the_excerpt(); ?>
-		    <a href="<?php the_permalink(); ?>" title="<?php the_title();  ?>" class="read-more"><?php _e('read more &rarr;', 'maju'); ?></a>
+		    <h1 class="post-title"><a href="<? the_permalink();?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h1>
+		    <?php the_content( __('Continue Reading..', 'maju') ); ?>
 		</article>
 		<?php endwhile; else: ?>
 		<article class="notfound">

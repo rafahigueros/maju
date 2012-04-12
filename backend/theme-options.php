@@ -112,7 +112,7 @@ function theme_options_do_page() {
 			<td scope="row" class="option_name"><?php _e( 'Facebook App ID', 'maju' ); ?></td>
 			<td>
 			    <input id="maju_theme_options[fb_id]" class="regular-text" type="text" name="maju_theme_options[fb_id]" value="<?php esc_attr_e( $options['fb_id'] ); ?>" />
-			    <span class="description"><?php _e('You ne dd to create an fb app first', 'maju'); ?></span>
+			    <span class="description"><?php _e('You need to create an fb app first', 'maju'); ?></span>
 			</td>
 		    </tr>
 		    <tr valign="top">
@@ -126,7 +126,14 @@ function theme_options_do_page() {
 			<td scope="row" class="option_name"><?php _e( 'Default Image for Facebook Open Graph', 'maju' ); ?></td>
 			<td>
 			    <input id="maju_theme_options[fb_default_img]" class="regular-text" type="text" name="maju_theme_options[fb_default_img]" value="<?php esc_attr_e( $options['fb_default_img'] ); ?>" />
-			    <span class="description"><?php _e('Image to use if there is no post/page image available.', 'maju'); ?></span>
+			    <span class="description"><?php _e('This image will be used when a page/homepage is shared/liked.', 'maju'); ?></span>
+			</td>
+		    </tr>
+		    <tr valign="top">
+			<td scope="row" class="option_name"><?php _e( 'Default Image for shared/liked posts', 'maju' ); ?></td>
+			<td>
+			    <input id="maju_theme_options[fb_share_img]" class="regular-text" type="text" name="maju_theme_options[fb_share_img]" value="<?php esc_attr_e( $options['fb_share_img'] ); ?>" />
+			    <span class="description"><?php _e('This image will be used when a post is shared/liked.', 'maju'); ?></span>
 			</td>
 		    </tr>
 		    <tr class="even">
@@ -212,6 +219,7 @@ function theme_options_validate( $input ) {
 	$input['fb_id'] = wp_filter_nohtml_kses( $input['fb_id'] );
 	$input['fb_user_id'] = wp_filter_nohtml_kses( $input['fb_user_id'] );
 	$input['fb_default_img'] = wp_filter_nohtml_kses( $input['fb_default_img'] );
+	$input['fb_share_img'] = wp_filter_nohtml_kses( $input['fb_share_img'] );
 
 	//Google Analytics
 	$input['g_a'] = wp_filter_nohtml_kses( $input['g_a'] );

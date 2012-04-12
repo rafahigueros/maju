@@ -55,13 +55,13 @@ blockquote p {
 
 /* HEADINGS _____________________________________*/
 h1, h2, h3, h4, h5, h6,
-h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{ font-family: 'Lucida Grande', sans-serif; }
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { color: #707070; font-family: 'Droid Sans','Lucida Grande', sans-serif; }
 h1 { font-size: 36px; }
-h2 { font-size: 28px; }
+h2 { font-size: 28px; color: #000; }
 h3 { font-size: 22px; }
-h4 { font-size: 18px; text-transform: uppercase; }
-h5 { font-size: 16px; text-transform: uppercase; letter-spacing: 3px; }
-h6 { font-size: 14px; color: #000; }
+h4 { font-size: 18px; text-transform: uppercase; letter-spacing: 3px; }
+h5 { font-size: 16px; }
+h6 { font-size: 14px; text-transform: uppercase;}
 
 /* LINKS _____________________________________*/
 a	    { text-decoration: none;  }

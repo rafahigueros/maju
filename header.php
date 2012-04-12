@@ -10,7 +10,7 @@ $options = get_option('maju_theme_options');
 
 ?>
 <!DOCTYPE html>
-<html <?php language_attributes(); ?> <?php if($options['fb_id'] == '') { } else { echo 'xmlns:og="http://ogp.me/ns#" xmlns:fb="https://www.facebook.com/2008/fbml'; } ?>>
+<html <?php language_attributes(); ?> <?php if($options['fb_id'] == '') { } else { echo 'xmlns:og="http://ogp.me/ns#" xmlns:fb="https://www.facebook.com/2008/fbml"'; } ?>>
 <head>
 
     <title><?php
@@ -65,7 +65,7 @@ if($options['fb_id'] == '' || $options['fb_user_id'] == '') { } else { ?>
     <?php } else if(catch_that_image() !== '') { ?>
     <meta property="og:image" content="<?php if (function_exists('catch_that_image')) {echo catch_that_image(); }?>" />
     <?php } else { ?>
-    <?php if($options['fb_default_img'] == '') {} else { ?><meta property="og:image" content="<?php echo $options['fb_default_img']; ?>" /> <?php } ?>
+    <?php if($options['fb_share_img'] == '') {} else { ?><meta property="og:image" content="<?php echo $options['fb_share_img']; ?>" /> <?php } ?>
     <?php } ?>
 
     <!-- if page is others -->
@@ -80,8 +80,6 @@ if($options['fb_id'] == '' || $options['fb_user_id'] == '') { } else { ?>
 
     <!-- StyleSheets -->
     <link rel="stylesheet" href="<?php bloginfo('template_url');?>/css/style.css" media="screen" />
-    <link rel="stylesheet" href="<?php bloginfo('template_url');?>/css/tables.css" media="screen" />
-    <link rel="stylesheet" href="<?php bloginfo('template_url');?>/css/prettify.css" media="screen" />
     <link rel="stylesheet" href="<?php bloginfo('template_url');?>/fancybox/jquery.fancybox.css" media="screen" />
     <noscript>
 	<link rel="stylesheet" href="<?php bloginfo('template_url');?>/css/mobile.css" />
@@ -160,7 +158,7 @@ if($options['fb_id'] == '' || $options['fb_user_id'] == '') { } else { ?>
 		<span class="icon-bar"></span>
 		<span class="icon-bar"></span>
 		<span class="icon-bar"></span>
-		<?php wp_nav_menu( array('menu' => 'Header' )); ?>
+		<?php wp_nav_menu('theme_location=Header'); ?>
 	    </nav>
 	</header><!-- #END Header -->
 

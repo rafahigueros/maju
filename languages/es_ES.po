@@ -19,33 +19,26 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Textdomain-Support: yes"
 
-#: 404.php:21
-#@ maju
-msgid "read more &rarr;"
-msgstr "leer m&aacute;s &rarr;"
-
-#: 404.php:25
+#: 404.php:24
 #@ maju
 msgid "404 "
 msgstr "404"
 
-#: 404.php:26
+#: 404.php:25
 #@ maju
 msgid "Try using the search form"
 msgstr "Intenta usar el formulario de búsqueda"
 
-#: 404.php:32
-#: home.php:30
-#: index.php:26
-#: page.php:27
+#: 404.php:31
+#: home.php:29
+#: index.php:27
 #@ maju
 msgid "Archives"
 msgstr "Archivo"
 
-#: 404.php:45
+#: 404.php:44
 #: home.php:43
-#: index.php:39
-#: page.php:40
+#: index.php:40
 #: search.php:44
 #@ maju
 msgid "View all posts &rarr;"
@@ -59,7 +52,8 @@ msgstr "Ver todos los art&iacute;culos &rarr;"
 #: page-fullwidth.php:23
 #: page.php:22
 #: search.php:23
-#: single.php:24
+#: single.php:34
+#: tag.php:23
 #@ maju
 msgid "Sorry, no posts matched your criteria."
 msgstr "Lo sentimos, no se encontraron resultados."
@@ -70,162 +64,163 @@ msgstr "Lo sentimos, no se encontraron resultados."
 msgid "Return to %s"
 msgstr "Regresar a %s"
 
-#: backend/theme-options.php:23
+#: backend/theme-options.php:22
 #@ maju
 msgid "Theme Options"
 msgstr "Opciones del tema"
 
-#: backend/theme-options.php:49
+#: backend/theme-options.php:48
 #@ maju
 msgid " Theme Options"
 msgstr " Opciones del tema"
 
-#: backend/theme-options.php:52
+#: backend/theme-options.php:51
 #@ maju
 msgid "Options saved"
 msgstr "Opciones guardadas"
 
-#: backend/theme-options.php:66
+#: backend/theme-options.php:65
 #@ maju
 msgid "Logo URL"
 msgstr "URL del logo"
 
-#: backend/theme-options.php:68
+#: backend/theme-options.php:67
 #@ default
 msgid "logo_url"
 msgstr ""
 
-#: backend/theme-options.php:72
+#: backend/theme-options.php:71
 #@ maju
 msgid "Favico URL"
 msgstr "URL del favico"
 
-#: backend/theme-options.php:74
+#: backend/theme-options.php:73
 #@ default
 msgid "favico_url"
 msgstr ""
 
-#: backend/theme-options.php:78
+#: backend/theme-options.php:77
 #@ maju
 msgid "Apple Touch Icon URL"
 msgstr "Apple Touch Icon URL"
 
-#: backend/theme-options.php:80
+#: backend/theme-options.php:79
 #@ default
 msgid "appleicon_url"
 msgstr ""
 
-#: backend/theme-options.php:84
+#: backend/theme-options.php:83
 #@ maju
 msgid "Links color"
 msgstr "Color de los links"
 
-#: backend/theme-options.php:87
+#: backend/theme-options.php:86
 #@ default
 msgid "links_color"
 msgstr ""
 
-#: backend/theme-options.php:89
+#: backend/theme-options.php:88
 #@ default
 msgid "links_hover"
 msgstr ""
 
-#: backend/theme-options.php:95
+#: backend/theme-options.php:94
 #@ maju
 msgid "Number of posts on Frontpage"
 msgstr "Numero de art&iacute;clos en la p&aacute;gina de inicio."
 
-#: backend/theme-options.php:97
+#: backend/theme-options.php:96
 #@ default
 msgid "post_num"
 msgstr ""
 
-#: backend/theme-options.php:102
+#: backend/theme-options.php:101
 #@ maju
 msgid "Social"
 msgstr "Social"
 
-#: backend/theme-options.php:106
+#: backend/theme-options.php:105
 #@ maju
 msgid "Twitter user name"
 msgstr "Usuario de Twitter"
 
-#: backend/theme-options.php:108
+#: backend/theme-options.php:107
 #@ default
 msgid "tw_user"
 msgstr ""
 
-#: backend/theme-options.php:113
+#: backend/theme-options.php:112
 #@ maju
 msgid "Facebook App ID"
 msgstr "ID de la aplicaci&oacute;n de Facebook"
 
-#: backend/theme-options.php:115
+#: backend/theme-options.php:114
 #@ default
 msgid "fb_id"
 msgstr ""
 
-#: backend/theme-options.php:120
+#: backend/theme-options.php:119
+#: backend/theme-options.php:122
 #@ maju
 msgid "Facebook User ID"
 msgstr "ID del usuario en Facebook"
 
-#: backend/theme-options.php:122
+#: backend/theme-options.php:121
 #@ default
 msgid "fb_user_id"
 msgstr ""
 
-#: backend/theme-options.php:127
+#: backend/theme-options.php:126
 #@ maju
 msgid "Default Image for Facebook Open Graph"
 msgstr "Imagen por defecto para Open Graph de Facebook"
 
-#: backend/theme-options.php:129
+#: backend/theme-options.php:128
 #@ default
 msgid "fb_default_img"
 msgstr ""
 
-#: backend/theme-options.php:135
+#: backend/theme-options.php:141
 #@ maju
 msgid "Other"
 msgstr "Otros"
 
-#: backend/theme-options.php:139
+#: backend/theme-options.php:145
 #@ maju
 msgid "Footer &copy;"
 msgstr "Footer &copy;"
 
-#: backend/theme-options.php:141
+#: backend/theme-options.php:147
 #@ default
 msgid "footer_copy"
 msgstr ""
 
-#: backend/theme-options.php:145
+#: backend/theme-options.php:151
 #@ maju
 msgid "Archives Page"
 msgstr "P&aacute;gina de archivo"
 
-#: backend/theme-options.php:147
+#: backend/theme-options.php:153
 #@ default
 msgid "archives_page"
 msgstr ""
 
-#: backend/theme-options.php:153
+#: backend/theme-options.php:159
 #@ default
 msgid "g_a"
 msgstr ""
 
-#: backend/theme-options.php:158
+#: backend/theme-options.php:164
 #@ maju
 msgid "Custom CSS"
 msgstr "CSS Personalizado"
 
-#: backend/theme-options.php:165
+#: backend/theme-options.php:171
 #@ maju
 msgid "Custom Javascript"
 msgstr "JavaScript Personalizado"
 
-#: backend/theme-options.php:174
+#: backend/theme-options.php:180
 #@ maju
 msgid "Save Options"
 msgstr "Salvar Opciones"
@@ -272,12 +267,12 @@ msgid "Comments are closed."
 msgstr "Comentarios cerrados"
 
 #: footer.php:23
-#: single.php:42
+#: single.php:56
 #@ maju
 msgid "top &uarr;"
 msgstr "arriba &uarr;"
 
-#: functions.php:54
+#: functions.php:42
 #@ default
 msgid "Header Navigation"
 msgstr ""
@@ -298,7 +293,7 @@ msgstr "Resultados de busqueda"
 msgid "Browse Archives"
 msgstr "Buscar el el archivo"
 
-#: single.php:52
+#: single.php:66
 #@ maju
 msgid "by:"
 msgstr "por:"
@@ -308,63 +303,102 @@ msgstr "por:"
 msgid "search"
 msgstr "buscar"
 
-#: backend/theme-options.php:151
+#: backend/theme-options.php:157
 #@ maju
 msgid "G analytics"
 msgstr "Google Analytics"
 
-#: backend/theme-options.php:154
+#: backend/theme-options.php:160
 #@ maju
 msgid "Insert G analytics like \"UA-29723403-1\""
 msgstr "Insertar unicamente el c&oacute;digo \\\"UA-29723403-1\\\""
 
-#: backend/theme-options.php:161
+#: backend/theme-options.php:167
 #@ maju
 msgid "Add your own styles, use only if you know what you are doing."
 msgstr "Añada sus propios estilos(Use solo si sabe lo que hace)."
 
-#: backend/theme-options.php:168
+#: backend/theme-options.php:174
 #@ maju
 msgid "Add your own scripts, use only if you know what you are doing."
 msgstr "Añada su propio JavaScript(Use solo si sabe lo que hace)."
 
-#: backend/theme-options.php:62
+#: backend/theme-options.php:61
 #@ maju
 msgid "General View Options"
 msgstr "Opciones Generales"
 
-#: backend/theme-options.php:86
+#: backend/theme-options.php:85
 #@ maju
 msgid "Links:"
 msgstr "Enlaces:"
 
-#: backend/theme-options.php:88
+#: backend/theme-options.php:87
 #@ maju
 msgid "Hover:"
 msgstr "Mouse Hover:"
 
-#: backend/theme-options.php:109
+#: backend/theme-options.php:108
 #@ maju
 msgid "Will be used for Tweet button"
 msgstr "Sera usado en el boton para Tweetear."
 
-#: backend/theme-options.php:116
-#@ maju
-msgid "Aplication Id(you ne dd to create an fb app first)"
-msgstr "ID de la aplicaci&oacute;n(debes crear una aplicaci&oacute;n antes)."
-
-#: backend/theme-options.php:123
-#@ maju
-msgid "Fasebook User ID"
-msgstr "Usuario en Facebook"
-
-#: backend/theme-options.php:130
-#@ maju
-msgid "Image to use if there is no other available image"
-msgstr "Imagen a usar si no existe imagen disponible."
-
-#: backend/theme-options.php:91
+#: backend/theme-options.php:90
 #@ maju
 msgid "Leave fields blank to set default color, enter hex values or color name"
 msgstr "Dejar en blanco para color por defecto, ingresar valores hexadecimales o nombre del color."
+
+#: 404.php:20
+#: home.php:24
+#: index.php:19
+#@ maju
+msgid "Continue Reading.."
+msgstr "Seguir Leyendo.."
+
+#: single.php:21
+#@ twentyeleven
+msgid "Pages:"
+msgstr ""
+
+#. translators: used between list items, there is a space after the comma
+#: single.php:26
+#@ maju
+msgid ", "
+msgstr ", "
+
+#: single.php:29
+#, php-format
+#@ maju
+msgid "<span class=\"%1$s\">tagged:</span> %2$s"
+msgstr "<span class=\"%1$s\">etiquetado:</span> %2$s"
+
+#: tag.php:17
+#@ maju
+msgid "Articles tagged under"
+msgstr "Artículos etiquetados como"
+
+#: backend/theme-options.php:115
+#@ maju
+msgid "You need to create an fb app first"
+msgstr "Necesitas crear una aplicación en Facebook primero"
+
+#: backend/theme-options.php:129
+#@ maju
+msgid "This image will be used when a page/homepage is shared/liked."
+msgstr "La imagen sera usada cuando una p&aacute;gina/p&aacute;gina de inicio sea compartida."
+
+#: backend/theme-options.php:133
+#@ maju
+msgid "Default Image for shared/liked posts"
+msgstr "Imagen por defecto para artículos compartidos."
+
+#: backend/theme-options.php:135
+#@ default
+msgid "fb_share_img"
+msgstr ""
+
+#: backend/theme-options.php:136
+#@ maju
+msgid "This image will be used when a post is shared/liked."
+msgstr "Esta imagen sera usada cuando un art&iacuteculo sea compartido."
 
