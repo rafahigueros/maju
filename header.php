@@ -158,7 +158,7 @@ if($options['fb_id'] == '' || $options['fb_user_id'] == '') { } else { ?>
 		<span class="icon-bar"></span>
 		<span class="icon-bar"></span>
 		<span class="icon-bar"></span>
-		<?php wp_nav_menu('theme_location=Header'); ?>
+		<?php wp_nav_menu(array('theme_location' => 'Header', 'menu' => 'Header')); ?>
 	    </nav>
 	</header><!-- #END Header -->
 
