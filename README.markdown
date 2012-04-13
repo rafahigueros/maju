@@ -19,8 +19,10 @@
 * New on v 1.3! i18n, theme fully translatable, because a premium theme is a translatable theme(includes a pot file).
 * New on v 1.3! spanish translation included.
 * and more..
-* Additionally , you can use it as a(very tiny) framework for your  projects.
 
+Additionally , you can use it as a(very tiny) framework for your  projects.
+
+[Demo site here](http://dev.rafaelhigueros.com/maju/)
 
 ### Installation
 
@@ -51,7 +53,7 @@ Go to `Appearance => Theme Options`. For developers, you can add more config. op
 
 Twitter user name will be used on the tweet button at the end of every post. G+, facebook, added, Pinterest and others might be added on future releases.
 
-To set up the “archives” page, create a new page and assign the “archives” template to it, name the page whatever you like, but “Archives” might be a good choice lol, then go to `Appearance => Theme Options`, and look for “Archives Page”, ad the page of the name you just created and you are done.
+To set up the "archives" page, create a new page and assign the “archives” template to it, name the page whatever you like, but “Archives” might be a good choice lol, then go to `Appearance => Theme Options`, and look for “Archives Page”, ad the page of the name you just created and you are done.
 
 Use `<pre></pre>` for large code blocks, or use `<code></code>` for bits of code witting your copy. NEW!! syntax highlighting via google code prettify, see documentation here
 
@@ -119,22 +121,22 @@ v1.2 Mar 18 2012 rafael higueros <contact@rafaelhigueros.com>
 
 v1.1  Mar 17 2012  rafael higueros  <contact@rafaelhigueros.com>
 
-*bug fixes including: styling on IE, default footer copy link, custom logo img with no link, etc;files affected: category.php header.php, footer.php, style.css
+* bug fixes including: styling on IE, default footer copy link, custom logo img with no link, etc;files affected: category.php header.php, footer.php, style.css
 
-*typos.
+* typos.
 
-*add correct wp menu support, creates a "Header" menu right after activation, and menu can be handled via widgets.
+* add correct wp menu support, creates a "Header" menu right after activation, and menu can be handled via widgets.
 
-*add SmartMetaBoxclass - thanks to Nikolay Yordanov<http://nyordanov.com/> (cool feature for devs)
+* add SmartMetaBoxclass - thanks to Nikolay Yordanov<http://nyordanov.com/> (cool feature for devs)
 
-*Styling Button Links With CSS3 - thanks too http://www.usabilitypost.com/
+* Styling Button Links With CSS3 - thanks too http://www.usabilitypost.com/
 
-*add date.php
+* add date.php
 
-*category.php improvements
+* category.php improvements
 
-*image rendering improved for mobile devices.
+* image rendering improved for mobile devices.
 
-*better theme options UI.
+* better theme options UI.
 
-*archives link option on theme options.
+* archives link option on theme options.
