@@ -98,42 +98,20 @@ function theme_options_do_page() {
 		    </tr>
 		    <tr class="even">
 		        <td colspan="2">
-			<h3><?php _e('Social', 'maju'); ?></h3>
+			<h3><?php _e('Open Grap protocol', 'maju'); ?></h3>
 		        </td>
 		    </tr>
 		    <tr valign="top">
-			<td scope="row" class="option_name"><?php _e( 'Twitter user name', 'maju' ); ?></td>
-			<td>
-			    <input id="maju_theme_options[tw_user]" class="regular-text" type="text" name="maju_theme_options[tw_user]" value="<?php esc_attr_e( $options['tw_user'] ); ?>" />
-			    <span class="description"><?php _e('Will be used for Tweet button', 'maju'); ?></span>
-			</td>
-		    </tr>
-		    <tr valign="top">
-			<td scope="row" class="option_name"><?php _e( 'Facebook App ID', 'maju' ); ?></td>
-			<td>
-			    <input id="maju_theme_options[fb_id]" class="regular-text" type="text" name="maju_theme_options[fb_id]" value="<?php esc_attr_e( $options['fb_id'] ); ?>" />
-			    <span class="description"><?php _e('You need to create an fb app first', 'maju'); ?></span>
-			</td>
-		    </tr>
-		    <tr valign="top">
-			<td scope="row" class="option_name"><?php _e( 'Facebook User ID', 'maju' ); ?></td>
-			<td>
-			    <input id="maju_theme_options[fb_user_id]" class="regular-text" type="text" name="maju_theme_options[fb_user_id]" value="<?php esc_attr_e( $options['fb_user_id'] ); ?>" />
-			    <span class="description"><?php _e('Facebook User ID', 'maju'); ?></span>
-			</td>
-		    </tr>
-		    <tr valign="top">
-			<td scope="row" class="option_name"><?php _e( 'Default Image for Facebook Open Graph', 'maju' ); ?></td>
+			<td scope="row" class="option_name"><?php _e( 'Default Image', 'maju' ); ?></td>
 			<td>
 			    <input id="maju_theme_options[fb_default_img]" class="regular-text" type="text" name="maju_theme_options[fb_default_img]" value="<?php esc_attr_e( $options['fb_default_img'] ); ?>" />
-			    <span class="description"><?php _e('This image will be used when a page/homepage is shared/liked.', 'maju'); ?></span>
 			</td>
 		    </tr>
 		    <tr valign="top">
-			<td scope="row" class="option_name"><?php _e( 'Default Image for shared/liked posts', 'maju' ); ?></td>
+			<td scope="row" class="option_name"><?php _e( 'Default Image for shared posts', 'maju' ); ?></td>
 			<td>
 			    <input id="maju_theme_options[fb_share_img]" class="regular-text" type="text" name="maju_theme_options[fb_share_img]" value="<?php esc_attr_e( $options['fb_share_img'] ); ?>" />
-			    <span class="description"><?php _e('This image will be used when a post is shared/liked.', 'maju'); ?></span>
+			    <span class="description"><?php _e('This image will be used when a post is shared.', 'maju'); ?></span>
 			</td>
 		    </tr>
 		    <tr class="even">
@@ -215,7 +193,6 @@ function theme_options_validate( $input ) {
 	$input['post_num'] = wp_filter_nohtml_kses( $input['post_num'] );
 
 	// Social
-	$input['tw_user'] = wp_filter_nohtml_kses( $input['tw_user'] );
 	$input['fb_id'] = wp_filter_nohtml_kses( $input['fb_id'] );
 	$input['fb_user_id'] = wp_filter_nohtml_kses( $input['fb_user_id'] );
 	$input['fb_default_img'] = wp_filter_nohtml_kses( $input['fb_default_img'] );

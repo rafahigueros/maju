@@ -50,18 +50,6 @@ get_header();  ?>
 		return false;
 	    });
 
-	    // Add search form
-	    $('<li></li>',{
-		id: 'show-search',
-		    text: '<?php _e('search', 'maju'); ?>'
-	    }).appendTo('nav ul:first-child');
-
-	    $('#show-search').on('click', function(){
-		$(this).hide();
-		$('#searchform').fadeIn();
-	    });
-
-
 	    //Move required span inside label on comment fomrs.
 	    var reqname = $('form#commentform p.comment-form-author span.required');
 	    var reqmail = $('form#commentform p.comment-form-email span.required');

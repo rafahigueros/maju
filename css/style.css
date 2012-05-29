@@ -15,7 +15,7 @@ body {
     color: #505050;
 }
 #wrapper { position: relative; }
-p, li, dd, dt, address { line-height: 25px; }
+p, li, dd, dt, address { line-height: 30px; }
 :focus { outline: 0; }
 
 /* LE PRE & CODE TAGS */
@@ -175,7 +175,7 @@ input[type="file"]:focus, input[type="radio"]:focus, input[type="checkbox"]:focu
 h1, h2, h3, h4, h5, h6,
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { color: #707070; font-family: 'Droid Sans','Lucida Grande', sans-serif; }
 h1 { font-size: 36px; }
-h2 { font-size: 28px; color: #000; }
+h2 { font-size: 28px; }
 h3 { font-size: 22px; }
 h4 { font-size: 18px; text-transform: uppercase; letter-spacing: 3px; }
 h5 { font-size: 16px; }
@@ -208,13 +208,6 @@ nav ul li {
     list-style-type: none;
 }
 
-#show-search { cursor: pointer }
-
-.js header #searchform {
-    display: none;
-    margin-top: 20px;
-}
-
 #searchsubmit { padding: 3px 6px }
 
 
@@ -227,9 +220,7 @@ article {
     padding: 0 0 10px 0;
 }
 
-    article .post-title { margin: 0 }
-    article .post-title-box { overflow: hidden }
-        article .post-title-box h1 { color: #000; margin: 0 }
+    article h1.title { color: #303030; margin: 0 }
 
     article img.wp-post-image {
         float: left;
@@ -269,10 +260,11 @@ article {
            -moz-border-radius: 4px;
                 border-radius: 4px;
     }
-	article .wp-caption-text { margin: -5px 0 0 0 }
-
-        /*article .wp-caption img.size-medium { max-width: 450px !important }
-        article .wp-caption img.size-small { max-width: 250px !important }*/
+	article .wp-caption-text { 
+	    font-family: 'Lucida Grande', arial;
+	    font-size: 12px;
+	    margin: -5px 0 0 0 
+	}
         article .wp-caption img { max-width: 480px !important }
  
     article .page-link {
@@ -321,7 +313,6 @@ article {
 .gallery-columns-8 dl { width: 11.7% }
 .gallery-columns-9 dl { width: 10.111% }
 
-.post-date { float: right }
 .tags-name { overflow: hidden }
 
 .notfound h1 { font-size: 40px }
@@ -402,6 +393,8 @@ ___________________________________________________________*/
 #comments-title { padding: 0 }
     #comments-title span { font-family: 'Droid Sans','Lucida Grande', sans-serif }
 
+.nocomments { display: none;  }
+
 #respond label {
     float: left;
     margin: 0 30px 0 0;
@@ -417,7 +410,7 @@ ___________________________________________________________*/
 }
     .commentlist li { list-style-type: none }
 
-.comment, .trackback, .pingback, .post-meta {
+.comment, .trackback, .pingback {
     background: #f9f9f9;
     border: 1px solid #f0f0f0;
     display: inline-block;

@@ -45,17 +45,10 @@ $options = get_option('maju_theme_options');
     <link rel="apple-touch-icon" href="<?php echo $options['appleicon_url']; ?>"/>
     <?php } ?>
 
-<?php
-//If set on theme options panel integrate Facebook Open Graph
-if($options['fb_id'] == '' || $options['fb_user_id'] == '') { } else { ?>
     <!-- Facebook Integration -->
-    <?php if (have_posts()):while(have_posts()):the_post(); endwhile; endif;?>
-    <!-- the default values -->
-    <meta property="fb:app_id" content="<?php echo $options['fb_id']; ?>" />
-    <meta property="fb:admins" content="<?php echo $options['fb_user_id']; ?>" />
-
+<?php if (have_posts()):while(have_posts()):the_post(); endwhile; endif;?>
+<?php if (is_single()) { ?>
     <!-- if page is content page -->
-    <?php if (is_single()) { ?>
     <meta property="og:url" content="<?php the_permalink() ?>"/>
     <meta property="og:title" content="<?php single_post_title(''); ?>" />
     <meta property="og:description" content="<?php echo strip_tags(get_the_excerpt($post->ID)); ?>" />
@@ -68,14 +61,13 @@ if($options['fb_id'] == '' || $options['fb_user_id'] == '') { } else { ?>
     <?php if($options['fb_share_img'] == '') {} else { ?><meta property="og:image" content="<?php echo $options['fb_share_img']; ?>" /> <?php } ?>
     <?php } ?>
 
+<?php } else { ?>
     <!-- if page is others -->
-    <?php } else { ?>
     <meta property="og:url" content="<?php the_permalink() ?>"/>
     <meta property="og:site_name" content="<?php bloginfo('name'); ?>" />
     <meta property="og:description" content="<?php bloginfo('description'); ?>" />
     <meta property="og:type" content="website" />
     <?php if($options['fb_default_img'] == '') {} else { ?><meta property="og:image" content="<?php echo $options['fb_default_img']; ?>" /> <?php } ?>
-    <?php } ?>
 <?php } ?>
 
     <!-- StyleSheets -->
@@ -143,7 +135,6 @@ if($options['fb_id'] == '' || $options['fb_user_id'] == '') { } else { ?>
 
 	<header class="grid_12"><!-- Header -->
 
-	    <?php get_search_form(); ?> 
 	    <?php 
 	    // If set on the theme options page, add the logo image, if not, just add the name ad desc. as text
 	    if($options['logo_url'] == '') { ?>
