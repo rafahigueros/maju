@@ -40,6 +40,23 @@ get_header();  ?>
 		</div>
 
 		<div class="post-meta">
+		    <iframe src="//www.facebook.com/plugins/like.php?href=<?php the_permalink(); ?>&amp;send=false&amp;layout=button_count&amp;width=100&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21&amp;appId=276799092404902" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowTransparency="true"></iframe>
+
+		    <a href="https://twitter.com/share" data-url="<?php the_permalink(); ?>" class="twitter-share-button" data-via="<?php echo $options['tw_user']; ?>">Tweet</a>
+		    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+		    <!-- Place this tag where you want the +1 button to render -->
+		    <div class="g-plusone"></div>
+
+		    <!-- Place this render call where appropriate -->
+		    <script type="text/javascript">
+		    (function() {
+			var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+			po.src = 'https://apis.google.com/js/plusone.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+		    })();
+		    </script>
+
 		    <div itemscope itemtype="http://schema.org/Person">
 			<p>
 			    <?php _e('post written by:', 'maju'); ?> <a href="<?php the_author_url(); ?>" rel="author" title="<?php the_author(); ?>" itemprop="url"><span itemprop="name"><?php the_author(); ?></a><br />

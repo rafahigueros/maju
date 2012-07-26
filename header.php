@@ -149,7 +149,7 @@ $options = get_option('maju_theme_options');
 		<span class="icon-bar"></span>
 		<span class="icon-bar"></span>
 		<span class="icon-bar"></span>
-		<?php wp_nav_menu(array('theme_location' => 'Header', 'menu' => 'Header')); ?>
+		<?php wp_nav_menu(array('theme_location' => 'Header')); ?>
 	    </nav>
 	</header><!-- #END Header -->
 

@@ -34,7 +34,7 @@
     ));
 
 
-    //Nav Menues
+    //Nav Menus
     add_action( 'init', 'register_navmenus' );
     function register_navmenus() {
 	register_nav_menus( 
