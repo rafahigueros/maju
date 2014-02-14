@@ -10,26 +10,25 @@ $options = get_option('maju_theme_options');
 
 get_header();  ?>
 
-	<div id="body">
+    <div class="row">
+        <section class="col-md-8">
+            <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+            <article> 
+                <div class="page-header">
+                    <h1 class="title"><?php the_title(); ?></h1>
+                </div>
+                <?php the_content(); ?>
+            </article>
+            <div class="clearfix"></div>
+            <?php endwhile; else: ?>
+            <article>
+                <p><?php _e('Sorry, no posts matched your criteria.', 'maju'); ?></p>
+            </article>
+            <?php endif; ?>
+        </section>
 
-	    <section id="articles" class="grid_9">
-
-		<article> 
-		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-		    <h1 class="title"><?php the_title(); ?></h1>
-		    <?php the_content(); ?>
-		<?php endwhile; else: ?>
-		<p><?php _e('Sorry, no posts matched your criteria.', 'maju'); ?></p>
-		<?php endif; ?>
-		</article>
-
-		<?php comments_template(); ?>
-
-	    </section>
-
-	    <!-- Sidebar -->
-	    <?php get_sidebar(); ?>
-
-	</div>	
+        <!-- Sidebar -->
+        <?php get_sidebar(); ?>
+    </div>
 
 <?php get_footer(); ?>

@@ -10,69 +10,87 @@ $options = get_option('maju_theme_options');
 
 get_header();  ?>
 
-	<div id="body">
+    <div class="row">
+        <section class="col-md-8">
 
-	    <section id="articles" class="grid_9">
+            <article itemscope itemtype="http://schema.org/Article"> 
+            <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+                <div class="page-header">
+                    <h1 itemprop="name" class="title"><?php the_title(); ?></h1>
+                </div>
+                <section itemprop="articleBody" class="article-content">
+                    <?php the_content(); ?>
+                </section>
+                <!--  LE ARTICLE CONTENT #END -->
 
-		<article itemscope itemtype="http://schema.org/Article"> 
-		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-		    <h1 itemprop="name" class="title"><?php the_title(); ?></h1>
-		    <?php the_content(); ?>
-		    <?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'maju' ) . '</span>', 'after' => '</div>' ) ); ?>
-		    <p itemprop="about">
-		    <?php
-			/* translators: used between list items, there is a space after the comma */
-			$tags_list = get_the_tag_list( '', __( ', ', 'maju' ) );
-			if ( $tags_list ): ?>
-			<span class="tag-links">
-			    <?php printf( __( '<span class="%1$s">tagged:</span> %2$s', 'maju' ), 'entry-utility-prep entry-utility-prep-tag-links', $tags_list );?>
-			</span>
-			<?php endif; // End if $tags_list ?>
-		    </p>
-		<?php endwhile; else: ?>
-		    <p><?php _e('Sorry, no posts matched your criteria.', 'maju'); ?></p>
-		<?php endif; ?>
-		</article>
+                <?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'maju' ) . '</span>', 'after' => '</div>' ) ); ?>
+                <!--  LE ARTICLE PAGINATION #END -->
+                
+                <dl class="dl-horizontal">
+                    <dt><?php _e('tagged:'); ?></dt>
+                    <dd class="tag-links" itemprop="genre">
+                        <?php
+                            $posttags = get_the_tags();
+                            if ($posttags) {
+                                foreach($posttags as $tag) {
+                                    echo '<a href="' . get_tag_link($tag_id) . '" itemprop="keywords">' . $tag->name . '</a>, '; 
+                                }
+                            }
+                        ?>
+                    </dd>
+                </dl>
+                <!--  LE ARTICLE TAGS #END -->
 
-		<div id="singlepost-widget-area"><!-- I use this for ad space usually -->
-		    <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Single Post Widgets") ) : ?>
-		    <?php endif; ?>
-		</div>
+            <?php endwhile; else: ?>
+                <p><?php _e('Sorry, no posts matched your criteria.', 'maju'); ?></p>
+            <?php endif; ?>
 
-		<div class="post-meta">
-		    <iframe src="//www.facebook.com/plugins/like.php?href=<?php the_permalink(); ?>&amp;send=false&amp;layout=button_count&amp;width=100&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21&amp;appId=276799092404902" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowTransparency="true"></iframe>
+                <dl class="dl-horizontal by_line">
+                    <dt>
+                        <?php _e('written by:', 'maju'); ?> <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>" title="<?php the_author(); ?>" itemprop="author" rel="me"><?php the_author(); ?></a><br />
+                    </dt>
+                    <dd><?php echo get_the_author_meta('description'); ?></dd>
+                    <dt><?php _e('Date:', 'maju'); ?></dt>
+                    <dd class="post-date" itemprop="datePublished" ><?php the_date();?></dd>
+                </dl>
 
-		    <a href="https://twitter.com/share" data-url="<?php the_permalink(); ?>" class="twitter-share-button" data-via="<?php echo $options['tw_user']; ?>">Tweet</a>
-		    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+            </article>
+           <!-- LE ARTICLE #END -->
 
-		    <!-- Place this tag where you want the +1 button to render -->
-		    <div class="g-plusone"></div>
+            <div id="singlepost-widget-area"><!-- I use this for ad space usually -->
+                <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Single Post Widgets") ) : ?>
+                <?php endif; ?>
+            </div>
 
-		    <!-- Place this render call where appropriate -->
-		    <script type="text/javascript">
-		    (function() {
-			var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-			po.src = 'https://apis.google.com/js/plusone.js';
-			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-		    })();
-		    </script>
+            <div class="post-meta">
+                <div class="fb-like" data-href="<?php the_permalink(); ?>" style="padding: 0 15px 0 0;" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
 
-		    <div itemscope itemtype="http://schema.org/Person">
-			<p>
-			    <?php _e('post written by:', 'maju'); ?> <a href="<?php the_author_url(); ?>" rel="author" title="<?php the_author(); ?>" itemprop="url"><span itemprop="name"><?php the_author(); ?></a><br />
-			    <span class="post-date"><?php the_date();?></span>
-			    <a style="float: right;" href="#" class="back-top"><?php _e('top &uarr;', 'maju') ?></a>
-			</p>
-		    </div>
-		</div>
+                <a href="https://twitter.com/share" data-url="<?php the_permalink(); ?>" class="twitter-share-button" data-via="<?php echo $options['tw_user']; ?>">Tweet</a>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
-		<?php comments_template(); ?>
+                <!-- Place this tag where you want the +1 button to render -->
+                <div class="g-plusone"></div>
 
-	    </section>
+                <!-- Place this render call where appropriate -->
+                <script type="text/javascript">
+                (function() {
+                var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                po.src = 'https://apis.google.com/js/plusone.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+                })();
+                </script>
 
-	    <!-- Sidebar -->
-	    <?php get_sidebar(); ?>
+                <a style="float: right; margin: -25px 0 0 0;" href="#" class="back-top"><?php _e('top &uarr;', 'maju') ?></a>
+            </div>
+            <!-- POST META #END -->
 
-	</div>	
+            <?php comments_template(); ?>
+
+        </section>
+
+        <!-- Sidebar -->
+        <?php get_sidebar(); ?>
+
+    </div>
 
 <?php get_footer(); ?>

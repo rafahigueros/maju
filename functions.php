@@ -13,41 +13,38 @@
     //Default Sidebar
     if ( function_exists('register_sidebar') )
     register_sidebar(array(
-	    'name' => 'Default Sidebar',
-	    'description' => 'Place sidebar widgets here.',
-	    'before_widget' => '<div id="%1$s" class="sidebar-box">',
-	    'after_widget' => '</div>',
-	    'before_title' => '<h5>',
-	    'after_title' => '</h5>',
+        'name' => 'Default Sidebar',
+        'description' => 'Place sidebar widgets here.',
+        'before_widget' => '<div id="%1$s" class="sidebar-box">',
+        'after_widget' => '</div>',
+        'before_title' => '<h5>',
+        'after_title' => '</h5>',
     ));
-
 
     //Single Post Widgets
     if ( function_exists('register_sidebar') )
     register_sidebar(array(
-	    'name' => 'Single Post Widgets',
-	    'description' => 'This appears at the end of each post page, right before the comments.',
-	    'before_widget' => '<div id="%1$s" class="singlepost-widget">',
-	    'after_widget' => '</div>',
-	    'before_title' => '<h5>',
-	    'after_title' => '</h5>',
+        'name' => 'Single Post Widgets',
+        'description' => 'This appears at the end of each post page, right before the comments.',
+        'before_widget' => '<div id="%1$s" class="singlepost-widget">',
+        'after_widget' => '</div>',
+        'before_title' => '<h5>',
+        'after_title' => '</h5>',
     ));
 
-
-    //Nav Menus
+    //Nav Menues
     add_action( 'init', 'register_navmenus' );
     function register_navmenus() {
-	register_nav_menus( 
-	    array(
-		'Header' => __( 'Header Navigation' ),
-	    )
-	);
-	// Check if Header menu exists and make it if not
-	if ( !is_nav_menu( 'Header' )) {
-	    $menu_id = wp_create_nav_menu( 'Header' );
-	}
+        register_nav_menus( 
+            array(
+            'Header' => __( 'Header Navigation' ),
+            )
+        );
+        // Check if Header menu exists and make it if not
+        if ( !is_nav_menu( 'Header' )) {
+            $menu_id = wp_create_nav_menu( 'Header' );
+        }
     }
-
 
     //Excerpt limit function
     function excerpt($limit) {
@@ -62,7 +59,6 @@
         return $excerpt;
     }
  
-
     //Ad backend options to Dashboard
     require_once ( get_template_directory() . '/backend/theme-options.php' );
 
@@ -74,40 +70,61 @@
     //Usage: 
     /*
     add_smart_meta_box('my-meta-box', array(
-	'title' => 'Project Info', // the title of the meta box
-	'pages' => array('page'),  // post types on which you want the metabox to appear
-	'context' => 'normal', // meta box context (see above)
-	'priority' => 'high', // meta box priority (see above)
-	'fields' => array( // array describing our fields
-	    array(
-		'name' => 'Project URL',
-		'id' => 'project_url',
-		'type' => 'text',
-	    ),
-	// put more arrays to add different fields
-	)
+        'title' => 'Project Info', // the title of the meta box
+        'pages' => array('page'),  // post types on which you want the metabox to appear
+        'context' => 'normal', // meta box context (see above)
+        'priority' => 'high', // meta box priority (see above)
+        'fields' => array( // array describing our fields
+            array(
+            'name' => 'Project URL',
+            'id' => 'project_url',
+            'type' => 'text',
+            ),
+        // put more arrays to add different fields
+        )
     ));
     */
+
 
     //deactivate WordPress Default Gallery styling
     add_filter( 'use_default_gallery_style', '__return_false' );
 
-
-    //Facebook Open Graph og:image function
-    function catch_that_image() {
-	global $post, $posts;
-	$first_img = '';
-	ob_start();
-	ob_end_clean();
-	$output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
-	$first_img = $matches [1] [0];
-	if(empty($first_img)){
-	    //Defines a default image
-	    $first_img = "";	   
-	 }
-	return $first_img;
+    //Bootstrap 3 comment form
+    add_filter( 'comment_form_default_fields', 'bootstrap3_comment_form_fields' );
+    function bootstrap3_comment_form_fields( $fields ) {
+        $commenter = wp_get_current_commenter();
+        
+        $req      = get_option( 'require_name_email' );
+        $aria_req = ( $req ? " aria-required='true'" : '' );
+        $html5    = current_theme_supports( 'html5', 'comment-form' ) ? 1 : 0;
+        
+        $fields   =  array(
+            'author' => '<div class="form-group comment-form-author">' . '<label for="author">' . __( 'Name' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
+                        '<input class="form-control" id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' /></div>',
+            'email'  => '<div class="form-group comment-form-email"><label for="email">' . __( 'Email' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
+                        '<input class="form-control" id="email" name="email" ' . ( $html5 ? 'type="email"' : 'type="text"' ) . ' value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' /></div>',
+            'url'    => '<div class="form-group comment-form-url"><label for="url">' . __( 'Website' ) . '</label> ' .
+                        '<input class="form-control" id="url" name="url" ' . ( $html5 ? 'type="url"' : 'type="text"' ) . ' value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" /></div>',
+        );
+        
+        return $fields;
     }
 
+    //Textarea
+    add_filter( 'comment_form_defaults', 'bootstrap3_comment_form' );
+    function bootstrap3_comment_form( $args ) {
+        $args['comment_field'] = '<div class="form-group comment-form-comment">
+                <label for="comment">' . _x( 'Comment', 'noun' ) . '</label> 
+                <textarea class="form-control" id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea>
+            </div>';
+        return $args;
+    }
+
+    //Submit Button
+    add_action('comment_form', 'bootstrap3_comment_button' );
+    function bootstrap3_comment_button() {
+        echo '<button class="btn btn-primary" type="submit">' . __( 'Submit' ) . '</button>';
+    }
 
     //i18n
     load_theme_textdomain( 'maju', get_template_directory() . '/languages' );
@@ -115,6 +132,6 @@
     $locale = get_locale();
     $locale_file = get_template_directory() . "/languages/$locale.php";
     if ( is_readable( $locale_file ) )
-	    require_once( $locale_file );
+        require_once( $locale_file );
 
 ?>
