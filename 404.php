@@ -10,47 +10,35 @@ $options = get_option('maju_theme_options');
 
 get_header(); ?>
 
-	<div id="body">
+    <div class="row">
+        <section class="col-md-8">
+        
+            <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+            <article> 
+                <h1 class="post-title"><a href="<? the_permalink();?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h1>
+                <?php the_content( __('Continue Reading..', 'maju') ); ?>
+            </article>
+            <?php endwhile; else: ?>
+            <article class="notfound">
+                <div class="page-header">
+                    <h1 class="title">404</h1>
+                </div>
+                <p><?php _e('Try using the search form', 'maju') ?></p>
+                <?php get_search_form();  ?>
+                <div class="clearfix"></div>
+                <br />
+                <h3><?php _e('archives', 'maju'); ?> </h3>
+                <div class="archives">
+                    <ul>
+                    <?php wp_get_archives('type=monthly'); ?>
+                    </ul>
+                </div>
+            </article>
+            <?php endif; ?>
+        </section>
 
-	    <section id="articles" class="grid_9">
-		
-		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-		<article> 
-		    <h1 class="post-title"><a href="<? the_permalink();?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h1>
-		    <?php the_content( __('Continue Reading..', 'maju') ); ?>
-		</article>
-		<?php endwhile; else: ?>
-		<article class="notfound">
-		    <h1><?php _e('404 ', 'maju'); ?><span>Page not found</span></h1> 
-		    <h5><?php _e('Try using the search form', 'maju') ?></h5>
-		    <?php get_search_form();  ?>
-		</article>
-		<?php endif; ?>
-
-		<div class="archives">
-		    <h4><?php _e('Archives', 'maju') ?></h4>
-		    <ul>
-		    <?php
-			$recentPosts = new WP_Query();
-			$recentPosts->query('showposts=10');
-		    ?>
-		    <?php while ($recentPosts->have_posts()) : $recentPosts->the_post(); ?>
-			<li><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><em><?php the_date('M d Y'); ?></em><?php the_title(); ?></a></li>
-		    <?php endwhile; wp_reset_query(); ?> 
-		    <?php
-			$archives = $options['archives_page'];
-			if($archives == '') { } else {
-		    ?>
-			<li class="view-all-posts"><a href="<?php echo get_option('home') ?>/<?php echo $archives; ?>"><?php _e('View all posts &rarr;', 'maju') ?></a></li>
-		    <?php } ?>
-		    </ul>
-		</div>
-
-	    </section>
-
-	    <!-- Sidebar -->
-	    <?php get_sidebar(); ?>
-
-	</div>	
+        <!-- Sidebar -->
+        <?php get_sidebar(); ?>
+    </div>
 
 <?php get_footer(); ?>
